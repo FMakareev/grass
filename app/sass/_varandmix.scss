@@ -1,0 +1,167 @@
+$dark-gray: #3d3d3d;
+$dark-gray2: #666666;
+$gray: #999999;
+$light-gray: #cccccc;
+$light-white: #f2f2f2;
+$white: #ffffff;
+
+
+$green: #7cb159;
+$dark-green: #669c43;
+$light-brown: #388659;
+$brown: #256a42;
+$dark-pink: #484d6d;
+$pink: #596089;
+
+@mixin h1 {
+  font-family: "MADEWaffleSoft", sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 0.36px;
+}
+
+@mixin h2 {
+  color: #3d3d3d;
+  font-family: "MADEWaffleSoft", sans-serif;
+  font-size: 27px;
+  text-transform: uppercase;
+  letter-spacing: 0.27px;
+}
+
+@mixin h3 {
+  color: #3d3d3d;
+  font-family: "MADEWaffleSoft", sans-serif;
+  font-size: 21px;
+  text-transform: uppercase;
+  letter-spacing: 0.21px;
+}
+
+@mixin h4 {
+  color: #3d3d3d;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+
+}
+
+@mixin h5 {
+  color: #666666;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.16px;
+}
+
+@mixin menu_roboto {
+  color: #3d3d3d;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.14px;
+  font-weight: 700;
+}
+
+@mixin regular_white {
+  color: $white;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.14px;
+  font-weight: 400;
+}
+
+@mixin reg {
+  color: #666666;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@mixin regular_opacity {
+  opacity: 0.54;
+  color: #666666;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+
+}
+
+@mixin link {
+  color: #7cb159;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+@mixin link_hover {
+  color: #388659;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+@mixin button-white {
+  display: flex;
+  margin: auto;
+  width: 205px;
+  height: 44px;
+  border: 1px solid $green;
+  @include menu_roboto;
+  color: $green;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  transition: background-color .1s ease;
+  outline:none;
+  &:hover {
+    border: 1px solid $green;
+    background-color: $green;
+    color: #ffffff;
+  }
+  &:active {
+    border: 1px solid $green;
+    background-color: $dark_green;
+    color: #ffffff
+  }
+}
+
+@mixin button-green {
+  width: 205px;
+  height: 44px;
+  border: 1px solid $green;
+  background-color: $green;
+  @include menu_roboto;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  transition: background-color .1s ease;
+  outline:none;
+  &:hover {
+    border: 1px solid $light-brown;
+    background-color: $light-brown;
+    color: #ffffff;
+  }
+  &:active {
+    border: 1px solid $brown;
+    background-color: $brown;
+    color: #ffffff
+  }
+}
+
+@mixin button-pink {
+  width: 205px;
+  height: 44px;
+  border: 1px solid $dark_pink;
+  background-color: $dark_pink;
+  @include menu_roboto;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  transition: background-color .1s ease;
+  outline:none;
+  &:hover {
+    border: 1px solid $pink;
+    background-color: $pink;
+    color: #ffffff;
+  }
+  &:active {
+    border: 1px solid $pink;
+    background-color: $pink;
+    color: #ffffff
+  }
+}

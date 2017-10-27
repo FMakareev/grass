@@ -1,0 +1,71 @@
+.dws-wrapper {
+  display: flex;
+  justify-content: top;
+}
+
+ul.accordion {
+  width: 60%;
+}
+
+ul.accordion li {
+  float:left;
+  width: 165px;
+  overflow: hidden;
+}
+
+//ul.accordion li:nth-child(1){
+//  width: 165px;
+//}
+
+ul.accordion{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+ul.accordion img{
+  width: 424px;
+  height: 329px;
+}
+
+ul.accordion li{
+  width: 165px;
+  overflow: hidden;
+  padding: 1px 1px 0;
+  cursor:pointer;
+  display:block;
+  //-moz-box-shadow:1px 3px 15px #7e807e;
+  //-webkit-box-shadow:1px 3px 15px #7e807e;
+  //box-shadow:1px 3px 15px #7e807e;
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  -ms-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s;
+}
+
+ul.accordion li:hover{
+  width: 100%;
+  -moz-box-shadow:1px 3px 15px $green;
+  -webkit-box-shadow:1px 3px 15px $green;
+  box-shadow:1px 5px 15px $green;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+
+//ul.accordion li:nth-child(1){
+//  width: 280px;
+//}
+//
+//ul.accordion:hover li:nth-child(1){
+//  width: 100%;
+//}
+
+//ul.accordion li:nth-child(4):hover{
+//  width:300px;
+//}
+
