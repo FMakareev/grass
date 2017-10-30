@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="389e0094-6b76-41db-8aea-93ba32260b48" name="travushka" url="http://sic4bu.beget.tech">
+        <fileTransfer host="sic4bu.beget.tech" port="21" rootFolder="/travushka">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

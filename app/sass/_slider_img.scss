@@ -26,6 +26,21 @@ ul.accordion{
 ul.accordion img{
   width: 424px;
   height: 329px;
+  opacity: 0.5;
+}
+
+ul.accordion li:nth-child(1) img {
+  opacity: 1;
+}
+
+
+.accordion h4 {
+  margin: 20px 5px;
+}
+
+ul.accordion img:hover {
+  opacity: 1;
+  transition: 1s ease-out 0.5s;
 }
 
 ul.accordion li{

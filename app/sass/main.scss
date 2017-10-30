@@ -156,13 +156,44 @@ body {
 }
 
 .choose {
-  display: none;
-  opacity: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+    h2 {
+      @include h2;
+      margin-top: 81px;
+      margin-bottom: 62px;
+    }
+    button {
+      @include button-green;
+      margin-bottom: 84px;
+    }
 }
+
+.choose_matresse {
+  width: 70%;
+}
+
 
 .choose-block_wrap {
   display: flex;
+  justify-content: space-evenly;
+  width: 100%;
 }
+
+.choose_matresse-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+      p {
+        @include reg;
+      }
+      button {
+        @include button-white;
+      }
+}
+
 
 .why {
   background-image: url("../img/bkg2.jpg");
@@ -336,7 +367,7 @@ justify-content: space-evenly;
   }
 
 .first_map img {
-  width: 1440px;
+  width: 100%;
 }
 
 .pink {
@@ -474,8 +505,9 @@ textarea {
   width: 85%;
   margin-top: 30px;
   height: 114px;
-  padding: 14px;
+  padding: 14px 0 0 14px;
   outline: $green;
+  border: none;
     &:hover, &:checked {
       border: 1px solid $green;
       color: #3b3b33;
@@ -501,3 +533,128 @@ input {
 .map img {
   width: 100%;
 }
+
+
+@media (max-width: 425px) {
+
+  header img {
+    width: 30%;
+    height: 30%;
+  }
+
+  .list {
+    display: none;
+  }
+
+
+  .mobile__menu {
+    display: block;
+  }
+
+  .why {
+    display: none;
+    min-height: 313px;
+  }
+
+  .why_mobile {
+    display: block;
+  }
+
+  .why_block {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slide_container {
+    background-color: red;
+  }
+
+  .rentganel {
+    left: 40%;
+  }
+
+
+  .know-how {
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: contain;
+        h2 {
+          margin: 20px 0;
+        }
+  }
+
+  .know-how_rentganel .rentganel-text {
+    margin-left: 51%;
+    margin-top: -77px;
+  }
+
+  .know-how_inner {
+    margin-top: 0;
+    margin-bottom: 0;
+    flex: 1 1 70px;
+  }
+
+  .link {
+    display: block;
+    padding-top: 60px;
+    margin-bottom: 30px;
+  }
+
+  .know-how_icon-wrap {
+    flex-direction: column;
+
+  }
+
+  .fake_map {
+    display: none;
+  }
+
+  .green_block {
+    background-color: red;
+  }
+
+  ul.accordion {
+    width: 100%;
+  }
+
+  .pink_wrap {
+    flex-direction: column;
+  }
+
+  .feedback {
+    flex-direction: column;
+  }
+
+
+  .feedback_contacts {
+  align-items: start;
+  padding-left: 8%;
+  min-height: 100%;
+  }
+
+  .feedback_inner {
+    width: 100%;
+}
+  textarea, input {
+   width: 100%;
+ }
+
+  input {
+    margin: 5px 0;
+  }
+
+  .footer_wrap {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+}
+
+
+
+

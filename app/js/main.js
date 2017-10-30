@@ -16,3 +16,26 @@ $('.button').click(function (event) {
             });
         });
 });
+
+// carousel
+
+$(document).ready(function () {
+    $("#why_we").owlCarousel()
+});
+
+
+$(".owl-carousel").owlCarousel({
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    margin: 0,
+    slideBy: 1,
+    items: 1,
+    center: !0,
+    autoWidth: !1,
+    responsive: {0: {items: 1}, 800: {items: 1}, 1e3: {items: 1}}
+});
+
+
+
