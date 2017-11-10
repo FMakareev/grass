@@ -1,0 +1,65 @@
+@import url('../global/variables.scss');
+
+#overlay {
+  min-height: 100vh
+}
+
+#overlay {
+  display: none;
+  margin: 0 auto;
+  position: fixed
+}
+
+#overlay {
+  background-color: #000;
+  opacity: .8;
+  -moz-opacity: .8;
+  filter: alpha(opacity=80);
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  z-index: 4;
+  top: 10%;
+  left: 10%;
+  background-color: #fff;
+  -webkit-box-shadow: 0 6px 21px 0 rgba(59, 59, 59, .1);
+  box-shadow: 0 6px 21px 0 rgba(59, 59, 59, .1)
+}
+
+.popup-container {
+  padding: 5%;
+  height: inherit;
+  justify-content: center;
+  display: flex;
+  flex-direction: column
+}
+
+.popup h2 {
+  @include h2;
+  text-align: center;
+  margin-top: 20px
+}
+
+.popup p {
+  @include reg;
+  text-align: center;
+  margin-top: 30px
+}
+
+.inputs {
+  margin: 30px 0
+}
+
+.popup_button {
+  @include button-green;
+}

@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/fonts.css">
+    <!--<link rel="stylesheet" href="css/normalize.css">-->
+    <!--<link rel="stylesheet" href="css/fonts.css">-->
     <link rel="stylesheet" href="css/libs.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="libs/owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="libs/owlcarousel/owl.theme.default.min.css">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic"
           rel="stylesheet">
@@ -17,60 +16,55 @@
 </head>
 <body>
 <div class="hero">
-    <header class="main-header">
+    <header class="header">
         <div class="menu">
-            <div class="menu_inner">
-                <img src="img/logo.svg"alt="">
-                <div class="list">
-                    <ul>
-                        <li><a href="#">Главная</a></li>
-                        <li><a href="#">Каталог</a></li>
-                        <li><a href="#">О нас</a></li>
-                        <li><a href="#">Оплата и доставка</a></li>
-                        <li><a href="#">Контакты</a></li>
-                    </ul>
-                </div>
+            <img class="menu__img" src="img/logo.svg" alt="">
+            <div class="menu__list">
+                <ul class="menu__list list">
+                    <li><a href="#" class="list__link list__link--active">Главная</a></li>
+                    <li><a href="#" class="list__link">Каталог</a></li>
+                    <li><a href="#" class="list__link">О нас</a></li>
+                    <li><a href="#" class="list__link">Оплата и доставка</a></li>
+                    <li><a href="#" class="list__link">Контакты</a></li>
+                </ul>
+            </div>
 
-                <div class="contacts">
-                    <a href="tel: +7(678)456-78-67">+7(678)456-78-67</a>
-                    <button class="button-green"><span>Перезвоните мне</span></button>
+            <div class="menu__contacts contacts">
+                <a class="contacts__link" href="tel: +7(678)456-78-67">+7(678)456-78-67</a>
+                <button class="button-green"><span>Перезвоните мне</span></button>
+            </div>
+
+
+            <div class="mobile__menu">
+                <ul id="menu_bar">
+                    <li><a href="#" class="bread__crunches">Главная</a></li>
+                    <li><a href="#" class="bread__crunches">Каталог</a></li>
+                    <li><a href="#" class="bread__crunches">О нас</a></li>
+                    <li><a href="#" class="bread__crunches">Оплата и доставка</a></li>
+                    <li><a href="#" class="bread__crunches">Контакты</a></li>
+                    <li><a href="tel: +7(678)456-78-67">+7(678)456-78-67</a></li>
+                    <li>
+                        <button class="button-green">Перезвоните мне</button>
+                    </li>
+                </ul>
+                <div class="bar">
+                    <a href="#" id="baar"><img src="img/menu.svg" width="30px" height="30px" alt=""></a>
                 </div>
             </div>
         </div>
-
-        <div class="mobile__menu">
-            <ul id="menu_bar">
-                <li><a href="index.php" class="bread__crunches">Главная</a></li>
-                <li><a href="service.php" class="bread__crunches">Каталог</a></li>
-                <li><a href="price.php" class="bread__crunches">О нас</a></li>
-                <li><a href="blog.php" class="bread__crunches">Оплата и доставка</a></li>
-                <li><a href="news.php" class="bread__crunches">Контакты</a></li>
-                <li><a href="tel: +7(678)456-78-67">+7(678)456-78-67</a></li>
-                <li>
-                    <button class="button-green">Перезвоните мне</button>
-                </li>
-
-
-            </ul>
-            <div class="bar">
-                <a href="#" id="baar"><img src="img/menu.svg" alt=""></a>
-            </div>
-        </div>
-
-
 
 
         <div class="container">
-            <div class="header_content">
+            <div class="header__content">
                 <h1>Ортопедические матрасы <br>
-                    <span>от 15 000 руб</span> от производителя <br>
-                    с доставкой уже послезавтра <br>
+                    <span>от 15 000 руб </span>от производителя<br>
+                    с доставкой уже послезавтра<br>
                     и гарантией <span>10 лет*</span></h1>
 
                 <p>Мы производим матрасы под индивидуальные <br>
                     требования каждого клиента.</p>
 
-                <div class="header_text-btn">
+                <div class="header__btn">
                     <p>Оставьте заявку и мы подберем <br>
                         подходящую для вас комплектацию <br>
                         матраса.</p>
@@ -80,110 +74,173 @@
                 <!--<pre>*Гарантия распространяется только на внутреннее содержимое матрасов </pre>-->
 
             </div>
+        </div>
 
 
     </header>
-
-
     <section class="choose">
-        <div class="choose_matresse">
-            <h2>
-                Соберите свой матрас <br>
-                или выберите уже готовый <br>
-                вариант
-            </h2>
+        <div class="choose__matress">
+            <div class="matress-wrap">
+                <h2>
+                    Соберите свой матрас <br>
+                    или выберите уже готовый <br>
+                    вариант
+                </h2>
 
-            <button class="choose_matresse-btn">Взрослые</button>
-            <button class="choose_matresse-btn">Детские</button>
-
-
-            <div class="choose-block_wrap">
-                <div class="choose_matresse-block">
-                    <img src="img/matresse.svg" alt="matresse">
-                    <p>Матрас ортопедический <br>
-                        эластичный жесткий <br>
-                        комбинированный</p>
-
-                    <button class="button-white">Заказать</button>
+                <div class="button-wrap">
+                    <button class="button-toggle choose__button--adult">Взрослые</button>
+                    <button class="button-toggle choose__button--child">Детские</button>
                 </div>
 
-                <div class="choose_matresse-block">
-                    <img src="img/matresse.svg" alt="matresse">
-                    <p>Матрас ортопедический <br>
-                        эластичный жесткий <br>
-                        комбинированный</p>
+                <div class="choose__block-wrap">
+                    <div class="choose__block">
+                        <img src="img/matress.svg" alt="matress">
+                        <p>Матрас ортопедический <br>
+                            эластичный жесткий <br>
+                            комбинированный</p>
 
-                    <button class="button-white">Заказать</button>
+                        <button class="button-white">расчитать стоимость</button>
+                    </div>
+
+                    <div class="choose__block">
+                        <img src="img/matress.svg" alt="matress">
+                        <p>Матрас ортопедический <br>
+                            эластичный жесткий <br>
+                            комбинированный</p>
+
+                        <button class="button-white">расчитать стоимость</button>
+                    </div>
+
+                    <div class="choose__block">
+                        <img src="img/matress.svg" alt="matress">
+                        <p>Матрас ортопедический <br>
+                            эластичный жесткий <br>
+                            комбинированный</p>
+                        <button class="button-white">расчитать стоимость</button>
+                    </div>
                 </div>
-
-                <div class="choose_matresse-block">
-                    <img src="img/matresse.svg" alt="matresse">
-                    <p>Матрас ортопедический <br>
-                        эластичный жесткий <br>
-                        комбинированный</p>
-                    <button class="button-white">Заказать</button>
-                </div>
-
-
             </div>
         </div>
+
+        <div class="choose__popup">
+            <div class="container__popup">
+                <img src="img/close.svg" width="20" height="20" id="close" alt="close">
+                <h2>Ваш Матрас:</h2>
+                <span>Размеры</span>
+                <p>Длина 195 см, ширина 80 см, высота 15 см.</p>
+                <span>Стоимость:</span>
+                <input value="0" name="summ" class="summ" style="border: none; maxlength="10" type="text">
+                <img src="img/popup-matress.png" class="main-picture" alt="matress">
+            </div>
+        </div>
+
+
+
 
         <div class="calculate">
-            <div class="calculate_wrap">
-            <h2>Калькулятор</h2>
-            <button class="choose_matresse-btn">Взрослые</button>
-            <button class="choose_matresse-btn">Детские</button>
+            <div class="calculate__wrap">
+                <h2>Калькулятор</h2>
+                <div class="button-wrap"">
+                    <button class="button-toggle calculate__button calculate__button--adult">Взрослые</button>
+                    <button class="button-toggle calculate__button calculate__button--child">Детские</button>
+                </div>
+
+                <div class="form">
+
+                    <p>Степень жесткости</p>
+
+                    <select name="softy" id="select__softy">
+                        <option value="0" selected="selected">Выберите жесткость</option>
+                        <option value="soft">Мягкий</option>
+                        <option value="medium">Средний</option>
+                        <option value="hard">Жесткий</option>
+                    </select>
 
 
-            <span>Степень жесткости</span>
-            <select name=choose id="">Выберите</select>
+                    <p>Размеры</p>
+                    <div class="form__wrap">
+                        <div class="select-wrap">
+                            <select name="size" id="select__size">
+                                <option class="selectItem" value="0" selected="selected">Выберите размер</option>
+                                <option class="selectItem" value="12200">80см</option>
+                                <option class="selectItem" value="13480">90см</option>
+                                <option class="selectItem" value="16500">120см</option>
+                                <option class="selectItem" value="17300">140см</option>
+                                <option class="selectItem" value="18900">160см</option>
+                                <option class="selectItem" value="20700">180см</option>
+                                <option class="selectItem" value="23000">200см</option>
+                            </select>
+                        </div>
+                        <p>Чехол</p>
 
-            <span>Размеры</span>
-            <div class="select_wrap">
-                <select name=choose id="">Длина</select>
-                <select name=choose id="">Ширина</select>
-                <select name=choose id="">Высота</select>
-            </div>
+                        <div class="form radio-wrap">
+                            <div class="radio-wrap__inner">
+                                <div class="radio__inner">
+                                    <input type="radio" class="selectItem" value="0" id="case-1" data-bind="checked: radio"  name="featured"  checked>
+                                    <label for="case-1"></label>
+                                    <span>Обычный</span>
+                                </div>
+                                <div class="radio__inner">
+                                    <input type="radio" class="selectItem" value="343" id="case-2" data-bind="checked: radio" name="featured" checked>
+                                    <label for="case-2"></label>
+                                    <span>Цветной<br> трикотаж</span>
+                                </div>
+                                <div class="radio__inner">
+                                    <input type="radio" class="selectItem" value="1430" id="case-3" data-bind="checked: radio" name="featured" checked>
+                                    <label for="case-3"></label>
+                                    <span>Велюр<br> дорогой</span>
+                                </div>
+                            </div>
 
-            <span>Чехол</span>
-            <div class="radio_wrap">
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
+                            <p>Внутреннее содержимое</p>
+                            <div class="radio_wrapper">
+                                <div class="radio-low__wrap">
+                                    <input type="radio" id="matress-1" class="selectItem" value="0" data-bind="checked: radio" name="inner" checked>
+                                    <label for="matress-1"></label>
+                                    <span>Ноу-хау  наполнение</span>
+                                </div>
+                                <div class="radio-low__wrap">
+                                    <input type="radio" id="matress-2" class="selectItem" value="3320" data-bind="checked: radio" name="inner" checked>
+                                    <label for="matress-2"></label>
+                                    <span>Блок независимых  пружин</span>
+                                </div>
+                                <div class="radio-low__wrap">
+                                    <input type="radio" id="matress-3" class="selectItem" value="3500" data-bind="checked: radio" name="inner" checked>
+                                    <label for="matress-3"></label>
+                                    <span>Беспружинный блок</span>
+                                </div>
+                            </div>
 
-                <span>Внутреннее содержимое</span>
-                <input type="radio">
-                <input type="radio">
-                <input type="radio">
+                            <button class="button-white" id="button-calculate">расчитать стоимость</button>
 
-                <button class="button-white">Заказать</button>
+                            <input value="0" name="summ" class="summ" readonly="readonly" style="border: medium none; background: none repeat scroll 0% 0% transparent; width: 200px;" maxlength="10" type="text">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-
     </section>
 
     <section class="why">
-        <div class="why_container">
+        <div class="why__container">
             <h2>Почему матрасы от “Травушки” <br>
                 это выгодная покупка?</h2>
+        <div class="why__blocks-wrap">
 
-            <div class="why_blocks_wrap">
-
-                <div class="why_block">
-                    <div class="icons"><img src="img/Shape2.svg" alt="">
+                <div class="why-block">
+                    <div class="why-block__icons"><img src="img/Shape2.svg" alt="">
                         <h2>10 лет <br>
                             гарантия</h2>
                         <p>На внутреннее <br>
                             содержание матрасов.</p>
                     </div>
-                    <div class="icons"><img src="img/Shape3.svg" alt="">
+                    <div class="why-block__icons"><img src="img/Shape3.svg" alt="">
                         <h2>11 лет опыта <br>
                             и знаний</h2>
                         <p>Воплощены в одной линейке <br>
                             ортопедических матрасов.</p>
                     </div>
-                    <div class="icons"><img src="img/Shape4.svg" alt="">
+                    <div class="why-block__icons"><img src="img/Shape4.svg" alt="">
                         <h2>8 лет <br>
                             работы</h2>
                         <p>Только с госзаказами для <br>
@@ -193,19 +250,19 @@
                 </div>
 
 
-                <div class="why_block">
-                    <div class="icons"><img src="img/Shape5.svg" alt="">
+                <div class="why-block">
+                    <div class="why-block__icons"><img src="img/Shape5.svg" alt="">
                         <h2>бесплатная <br>
                             доставка</h2>
                         <p>По Санкт-Петербургу.</p>
                     </div>
-                    <div class="icons"><img src="img/Shape6.svg" alt="">
+                    <div class="why-block__icons"><img src="img/Shape6.svg" alt="">
                         <h2>возвращаем <br>
                             деньги</h2>
                         <p>Если матрас вам не понравился <br>
                             или оказался неудобным.</p>
                     </div>
-                    <div class="icons"><img src="img/Shape7.svg" alt="">
+                    <div class="why-block__icons"><img src="img/Shape7.svg" alt="">
                         <h2>Решаем проблемы <br>
                             напрямую</h2>
                         <p>Если возникли какие-либо проблемы <br>
@@ -219,82 +276,78 @@
         </div>
     </section>
 
-    <section class="why why_mobile">
+    <section class="why__mobile">
         <div id="why_we" class="owl-carousel owl-theme loop">
             <!--<div>-->
-                <!--<div class="slide_container">-->
+            <!--<div class="slide_container">-->
             <!--<div class="why_container">-->
-                <!--<h2>Почему матрасы от “Травушки” <br>-->
-                    <!--это выгодная покупка?</h2>-->
+            <!--<h2>Почему матрасы от “Травушки” <br>-->
+            <!--это выгодная покупка?</h2>-->
 
-                <!--<div class="why_blocks_wrap">-->
-                    <div class="slide item">
-                        <div class="why_block">
-                            <div class="icons"><img src="img/Shape2.svg" alt="">
-                                <h2>10 лет <br>
-                                    гарантия</h2>
-                                <p>На внутреннее <br>
-                                    содержание матрасов.</p>
-                            </div>
-                            <div class="icons"><img src="img/Shape3.svg" alt="">
-                                <h2>11 лет опыта <br>
-                                    и знаний</h2>
-                                <p>Воплощены в одной линейке <br>
-                                    ортопедических матрасов.</p>
-                            </div>
-                        </div>
+            <!--<div class="why_blocks_wrap">-->
+            <div class="slide item">
+                <div class="why-block">
+                    <div class="why-block__icons"><img src="img/Shape2.svg" alt="">
+                        <h2>10 лет <br>
+                            гарантия</h2>
+                        <p>На внутреннее <br>
+                            содержание матрасов.</p>
                     </div>
-
-
-                    <div class="slide item">
-                        <div class="why_block">
-                            <div class="icons"><img src="img/Shape4.svg" alt="">
-                                <h2>8 лет <br>
-                                    работы</h2>
-                                <p>Только с госзаказами для <br>
-                                    медучереждений по их <br>
-                                    особым требованиям.</p>
-                            </div>
-
-                            <div class="icons"><img src="img/Shape5.svg" alt="">
-                                <h2>бесплатная <br>
-                                    доставка</h2>
-                                <p>По Санкт-Петербургу.</p>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="slide item">
-                        <div class="why_block">
-                            <div class="icons"><img src="img/Shape6.svg" alt="">
-                                <h2>возвращаем <br>
-                                    деньги</h2>
-                                <p>Если матрас вам не понравился <br>
-                                    или оказался неудобным.</p>
-                            </div>
-                            <div class="icons"><img src="img/Shape7.svg" alt="">
-                                <h2>Решаем проблемы <br>
-                                    напрямую</h2>
-                                <p>Если возникли какие-либо проблемы <br>
-                                    или вы хотите оформить возврат, вам не надо <br>
-                                    ничего писать и ожидать ответа. Просто <br>
-                                    приезжайте к нам и мы решим любые проблемы, <br>
-                                    связанные с нашими матрасами.</p>
-                            </div>
-                        </div>
+                    <div class="why-block__icons"><img src="img/Shape3.svg" alt="">
+                        <h2>11 лет опыта <br>
+                            и знаний</h2>
+                        <p>Воплощены в одной линейке <br>
+                            ортопедических матрасов.</p>
                     </div>
                 </div>
-                <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+            </div>
+
+
+            <div class="slide item">
+                <div class="why-block">
+                    <div class="why-block__icons"><img src="img/Shape4.svg" alt="">
+                        <h2>8 лет <br>
+                            работы</h2>
+                        <p>Только с госзаказами для <br>
+                            медучереждений по их <br>
+                            особым требованиям.</p>
+                    </div>
+
+                    <div class="why-block__icons"><img src="img/Shape5.svg" alt="">
+                        <h2>бесплатная <br>
+                            доставка</h2>
+                        <p>По Санкт-Петербургу.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="slide item">
+                <div class="why-block">
+                    <div class="why-block__icons"><img src="img/Shape6.svg" alt="">
+                        <h2>возвращаем <br>
+                            деньги</h2>
+                        <p>Если матрас вам не понравился <br>
+                            или оказался неудобным.</p>
+                    </div>
+                    <div class="why-block__icons"><img src="img/Shape7.svg" alt="">
+                        <h2>Решаем проблемы <br>
+                            напрямую</h2>
+                        <p>Если возникли какие-либо проблемы <br>
+                            или вы хотите оформить возврат, вам не надо <br>
+                            ничего писать и ожидать ответа. Просто <br>
+                            приезжайте к нам и мы решим любые проблемы, <br>
+                            связанные с нашими матрасами.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="know-how">
-        <div class="know-how_rentganel">
+        <div class="know-how__rentganel">
             <img src="img/rentganel.svg" class="rentganel" alt="rentganel">
-            <p class="rentganel-text">
+            <p class="rentganel__text">
                 Матрасы “Травушка” <br>
                 это инновации, <br>
                 создающие комфорт
@@ -307,30 +360,29 @@
             </h2>
 
 
-            <div class="know-how_icon-wrap">
-                <div class="know-how_inner">
+            <div class="know-how__icon-wrap">
+                <div class="know-how__icon-inner">
                     <img src="img/Shape1.svg" alt="">
                     <p>Обеспечивает удобство</p>
                 </div>
-                <div class="know-how_inner">
+                <div class="know-how__icon-inner">
                     <img src="img/Shape1.svg" alt="">
                     <p>Гарантирует долговечность</p>
                 </div>
-                <div class="know-how_inner">
+                <div class="know-how__icon-inner">
                     <img src="img/Shape1.svg" alt="">
                     <p>Одобрен экспертами</p>
                 </div>
             </div>
 
 
-            <a href="#" class="link">Просмотреть сертификат</a>
+            <a href="#" class="know-how__link">Просмотреть сертификат</a>
         </div>
     </section>
 
-    <section class="fake_map">
-        <div class="fake_map_wrap">
-            <div class="green_block">
-                <div class="green_block_text">
+    <section class="fake-map">
+            <div class="green-block">
+                <div class="green-block__text">
                     <h2>Доставка</h2>
                     <p>Доставка по Санкт-Петербургу</p>
                     <h3>Безплатно</h3>
@@ -343,135 +395,230 @@
                 </div>
             </div>
 
-            <div class="first_map">
-                <img src="img/map.png" alt="map">
-            </div>
+    </section>
+<div class="first-map"></div>
+    <section class="pink">
+        <div class="container">
+            <div class="pink-wrap">
+                <div class="pink__column">
+                    <h2>возможно вы думаете,  что...</h2>
+                    <h3>хороший=дорогой</h3>
 
-        </div>
+                    <p>На самом деле цена сильно зависит от бренда. Однако это не <br>
+                         значит, что дешевый матрас окажется так же хорош. Нередко  <br>
+                        их производят из материалов низкого качества.  </p>
 
+                    <p>Мы предлагаем беспроигрышный вариант: качество <br>
+                         по умеренной цене.</p>
 
-</section>
-
-<section class="pink">
-    <div class="container">
-        <div class="pink_wrap">
-            <div class="column">
-                <h2>возможно вы думаете,  что...</h2>
-                <h3>хороший=дорогой</h3>
-
-                <p>На самом деле цена сильно зависит от бренда. Однако это не <br>
-                     значит, что дешевый матрас окажется так же хорош. Нередко  <br>
-                    их производят из материалов низкого качества.  </p>
-
-                <p>Мы предлагаем беспроигрышный вариант: качество <br>
-                     по умеренной цене.</p>
-
-                <h3><span>Необычный</span> матрас является целебным <br></h3>
-                <p>Матрасы с частичками серебра, матрасы с добавками минералов <br>
-                    - все это пустой маркетинг. Лечебные свойства таких матрасов <br>
-                     сомнительны, если вообще существуют.   <br></p>
-                <p>
-                    С другой стороны, сон на ортопедическом матрасе благотворно <br>
-                     влияет на общее состояние здоровья человека и на качество сна. <br>
-                     Это подтверждено множеством исследований.
-                </p>
-            </div>
-
-            <div class="column">
-                <h2>вы, конечно,  можете...</h2>
-                <h3>Купить более <span> дорогой/ <br>  дешевый</span> матрас</h3>
-
-                <p>В первом случае вы зря переплатите. Можно получить лучшее <br>
-                     качество за меньшие деньги</p>
-
-                <p>  Во втором случае вы потратитесь дважды. Дешевый матрас быстро <br>
-                     придет в негодность, и вы будете вынуждены поменять его.</p>
-
-                <h3><span>спать</span> на диване <br>  или раскладушке</h3>
-
-                <p>Зачем страдать? Пора получать от сна удовольствие! <br></p>
-                <p>Вам даже не придется мучиться выбором. Ортопедические <br>
-                     матрасы “Травушка” универсальны и подойдут каждому. <br></p>
-
-                <button class="button button-green">заказать матрас</button>
-
-            </div>
-        </div>
-    </div>
-
-</section>
-
-
-<section class="slider_img">
-    <div class="container">
-    <h2>Помимо матрасов  <br>
-         мы производим 
-    </h2>
-    <div class="dws-wrapper">
-        <ul class="accordion">
-            <li><img src="img/slide1.jpg" alt=""><h4>Подушки</h4></li>
-            <li><img src="img/slide2.jpg" alt=""><h4>покрывала</h4></li>
-            <li><img src="img/slide3.jpg" alt=""><h4>одеяла</h4></li>
-            <li><img src="img/slide4.jpg" alt=""><h4>постельное <br>  белье</h4></li>
-            <li><img src="img/slide5.jpg" alt=""><h4>детские<br>спальные<br>комплекты </h4></li>
-
-        </ul>
-    </div>
-    <button class="button button-green">узнать больше</button>
-    </div>
-</section>
-
-    <section class="feedback">
-        <!--<div class="feedback_container">-->
-            <div class="feedback_contacts">
-                <div class="feedback_text">
-                <h2>Контакты</h2>
-                <p>Телефон: </p>
-
-                <h3>+7 (812) 346-59-75</h3>
-
-                <p>Почта: </p>
-                <h3>arevik_vk@inbox.ru</h3>
-
-                <p>Адрес: </p>
-                <h3>СПб, Богатырский пр., <br>
-                     д. 18 корп. 2, лит. Б <br>
-                     офис № 307 и № 309 <br>  
-                    (4этаж)</h3>
-
-            </div>
-            </div>
-            <!--</div>-->
-            <div class="feedback_inner">
-                <div class="feedback_inner-container">
-                    <h2>Обратная связь</h2>
-
-                    <p>Если у вас есть вопросы, заполните форму ниже, <br>
-                         мы ответим вам в ближайшее время
+                    <h3><span>Необычный</span> матрас является целебным <br></h3>
+                    <p>Матрасы с частичками серебра, матрасы с добавками минералов <br>
+                        - все это пустой маркетинг. Лечебные свойства таких матрасов <br>
+                         сомнительны, если вообще существуют.   <br></p>
+                    <p>
+                        С другой стороны, сон на ортопедическом матрасе благотворно <br>
+                         влияет на общее состояние здоровья человека и на качество сна. <br>
+                         Это подтверждено множеством исследований.
                     </p>
+                </div>
 
-                    <div class="input-wrap">
-                        <input type="text" name="name" placeholder="Имя">
-                        <input type="tel" name="phone" placeholder="Номер">
-                    </div>
-                    <textarea>Ваш вопрос</textarea>
-                    <button class="button button-green">отправить</button>
+                <div class="pink__column">
+                    <h2>вы, конечно,  можете...</h2>
+                    <h3>Купить более <span> дорогой/ <br>  дешевый</span> матрас</h3>
+
+                    <p>В первом случае вы зря переплатите. Можно получить лучшее <br>
+                         качество за меньшие деньги</p>
+
+                    <p>  Во втором случае вы потратитесь дважды. Дешевый матрас быстро <br>
+                         придет в негодность, и вы будете вынуждены поменять его.</p>
+
+                    <h3><span>спать</span> на диване <br>  или раскладушке</h3>
+
+                    <p>Зачем страдать? Пора получать от сна удовольствие! <br></p>
+                    <p>Вам даже не придется мучиться выбором. Ортопедические <br>
+                         матрасы “Травушка” универсальны и подойдут каждому. <br></p>
+
+                    <button class="button button-green">расчитать стоимость</button>
+
                 </div>
             </div>
+        </div>
+
+    </section>
 
 
+    <section class="slider-img">
+        <div class="container container__slider">
+            <h2>Помимо матрасов  <br>
+                мы производим 
+            </h2>
+            <div class="dws-wrapper">
+                <ul class="accordion">
+                    <li><img src="img/slide1.jpg" alt=""><h4>Подушки</h4></li>
+                    <li><img src="img/slide2.jpg" alt=""><h4>покрывала</h4></li>
+                    <li><img src="img/slide3.jpg" alt=""><h4>одеяла</h4></li>
+                    <li><img src="img/slide4.jpg" alt=""><h4>постельное <br>  белье</h4></li>
+                    <li><img src="img/slide5.jpg" alt=""><h4>детские<br>спальные<br>комплекты </h4></li>
 
-</section>
-<section class="map">
-    <img src="img/map1.jpg" alt="" class="">
-</section>
+                </ul>
+            </div>
+            <button class="button button-green hide_me">узнать больше</button>
+
+            <div class="slider-img__mobile">
+                <div class="pic" style="background-image:url(../img/slide1.jpg)">
+                    <div class="content_wrap">
+                        <h2>Подушки</h2>
+                        <button class="button button-green">узнать больше</button>
+                    </div>
+                </div>
+                <div class="pic" style="background-image:url(../img/slide2.jpg)">
+                    <div class="content_wrap">
+                        <h2>покрывала</h2>
+                        <button class="button button-green">узнать больше</button>
+                    </div>
+                </div>
+                <div class="pic" style="background-image:url(../img/slide3.jpg)">
+                    <div class="content_wrap">
+                        <h2>одеяла</h2>
+                        <button class="button button-green">узнать больше</button>
+                    </div>
+                </div>
+                <div class="pic" style="background-image:url(../img/slide4.jpg)">
+                    <div class="content_wrap">
+                        <h2>постельное  белье</h2>
+                        <button class="button button-green">узнать больше</button>
+                    </div>
+                </div>
+                <div class="pic" style="background-image:url(../img/slide5.jpg)">
+                    <div class="content_wrap">
+                        <h2>детские комплекты </h2>
+                        <button class="button button-green">узнать больше</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="feedback">
+        <div class="feedback__container">
+            <div class="feedback__contacts">
+                <div class="feedback__text">
+                    <h2>Контакты</h2>
+                    <p>Телефон: </p>
+
+                    <h3>+7 (812) 346-59-75</h3>
+
+                    <p>Почта: </p>
+                    <h3>arevik_vk@inbox.ru</h3>
+
+                    <p>Адрес: </p>
+                    <h3>СПб, Богатырский пр., <br>
+                         д. 18 корп. 2, лит. Б <br>
+                         офис № 307 и № 309 <br>(4этаж)</h3>
+
+                </div>
+            </div>
+        </div>
+        <div class="feedback__inner">
+            <div class="feedback__wrapper">
+                <h2>Обратная связь</h2>
+
+                <p>Если у вас есть вопросы, заполните форму ниже, <br>
+                     мы ответим вам в ближайшее время
+                </p>
+
+                <div class="input-wrap">
+                    <input type="text" name="name" placeholder="Имя">
+                    <input type="tel" name="phone" placeholder="Номер">
+                </div>
+                <textarea>Ваш вопрос</textarea>
+                <button class="button button-green">отправить</button>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="map"></div>
+
+    <script>
+        function initMap() {
+            var options = {
+                zoom: 15,
+                center: {lat: 59.933079, lng: 30.272973},
+                styles: [{
+                    "featureType": "water",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#e9e9e9"}, {"lightness": 17}]
+                }, {
+                    "featureType": "landscape",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#f5f5f5"}, {"lightness": 20}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#ffffff"}, {"lightness": 17}]
+                }, {
+                    "featureType": "road.highway",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#ffffff"}, {"lightness": 29}, {"weight": 0.2}]
+                }, {
+                    "featureType": "road.arterial",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#ffffff"}, {"lightness": 18}]
+                }, {
+                    "featureType": "road.local",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#ffffff"}, {"lightness": 16}]
+                }, {
+                    "featureType": "poi",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#f5f5f5"}, {"lightness": 21}]
+                }, {
+                    "featureType": "poi.park",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#dedede"}, {"lightness": 21}]
+                }, {
+                    "elementType": "labels.text.stroke",
+                    "stylers": [{"visibility": "on"}, {"color": "#ffffff"}, {"lightness": 16}]
+                }, {
+                    "elementType": "labels.text.fill",
+                    "stylers": [{"saturation": 36}, {"color": "#333333"}, {"lightness": 40}]
+                }, {"elementType": "labels.icon", "stylers": [{"visibility": "off"}]}, {
+                    "featureType": "transit",
+                    "elementType": "geometry",
+                    "stylers": [{"color": "#f2f2f2"}, {"lightness": 19}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.fill",
+                    "stylers": [{"color": "#fefefe"}, {"lightness": 20}]
+                }, {
+                    "featureType": "administrative",
+                    "elementType": "geometry.stroke",
+                    "stylers": [{"color": "#fefefe"}, {"lightness": 17}, {"weight": 1.2}]
+                }]
+            };
+
+
+            var map = new
+            google.maps.Map(document.getElementById('map'), options);
+
+
+            var marker = new google.maps.Marker({
+                position: {lat: 59.933076, lng: 30.272973},
+                map: map,
+                icon: src = 'img/pointer.png'
+            });
+        }
+
+        //    $('.gm-style-mtc').css('display', 'none');
+        //    $('.gm-svpc').css('display', 'none');
+    </script>
 </div>
 </div>
 
 
 <div id="overlay"></div>
 <div class="popup">
-    <div class="popup-container">
+    <div class="popup__container">
         <!--<a href="#"><img src="img/close.svg" id="close" width="15px" height="15px" alt="close"></a>-->
         <h2>Свяжитесь с нами</h2>
         <p> Оставьте свои данные в форме ниже и мы вам позвоним.</p>
@@ -483,34 +630,26 @@
                    name="phone"
                    placeholder="Введите свой номер">
         </div>
-        <button formmethod="post" name="" id="close" class="popup_button">оставить заявку</button>
+        <button formmethod="post" name="" id="close" class="popup__button">оставить заявку</button>
     </div>
 </div>
 
 
-
 <footer>
-    <div class="footer_wrap">
-        <div class="wrap_inner">
+    <div class="footer-wrap">
+        <div class="wrap__inner">
             <p>2017 Травушка</p>
         </div>
-        <div class="wrap_inner">
+        <div class="wrap__inner">
             <p>Разработанно студией <span>Boroda</span></p>
         </div>
     </div>
 </footer>
+
+
+<script src="js/libs.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzppVOcMfaQB-M2e9BVwdB19ETFV2lECc&callback=initMap"
+        type="text/javascript"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
-
-<script src="libs/jquery-3.2.1.min.js"></script>
-<!--<script src="libs/underscore-min.js"></script>-->
-<!--<script src="scripts/inputmask.min.js"></script>-->
-<!--<script src="scripts/jquery.inputmask.min.js"></script>-->
-
-
-<!--<script src="scripts/wow.min.js"></script>-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>-->
-<script src="libs/owlcarousel/owl.carousel.min.js"></script>
-<!--<script src="scripts/jelly.js"></script>-->
-<script src="js/main.js"></script>
-

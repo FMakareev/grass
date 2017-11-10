@@ -1,0 +1,13 @@
+{
+  "name": "Ilya",
+  "description": "",
+  "main": "script.js",
+  "authors": [
+    "Ilya"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "jquery": "2.*"
+  }
+}

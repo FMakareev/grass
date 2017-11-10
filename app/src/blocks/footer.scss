@@ -1,0 +1,18 @@
+@import url('../global/variables.scss');
+
+.footer-wrap {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0 3%;
+  background-color: $pink;
+    p {
+      @include reg;
+      color: $light-white;
+    }
+  span {
+    @include link;
+  }
+}
+

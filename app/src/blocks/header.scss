@@ -1,0 +1,87 @@
+@import url('../global/variables.scss');
+.header {
+  min-height: 100vh;
+  background-image: url("../img/bkg1.jpg");
+  background-size: cover;
+  background-position: center;
+  max-width: 1920px;
+}
+
+#menu_bar {
+  display: none;
+}
+
+.menu {
+  width: 100vw;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1920px;
+  &__list {
+    display: flex;
+    align-items: center;
+    flex: 1 1 65%;
+    justify-content: flex-start;
+  }
+  &__img {
+    height: 36px;
+    align-self: center;
+    margin: 0 2%;
+  }
+}
+
+.list {
+  display: flex;
+  padding: 0;
+  list-style-type: none;
+  max-width: 100%;
+  min-width: 10%;
+  width: 90%;
+  justify-content: space-evenly;
+    &__link {
+      @include menu_roboto;
+      text-decoration: none;
+      &:hover {
+        color: $dark-green;
+    }
+  }
+}
+
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.menu__contacts {
+  flex: 0 0 26%;
+  align-self: flex-start;
+  margin-right: 2%;
+  justify-content: flex-end;
+}
+
+
+.contacts {
+  display: flex;
+  align-self: center;
+  &__link {
+      font-family: Roboto, sans-serif;
+      color:  #7cb159;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: right;
+      text-decoration: none;
+      margin-right: 3%;
+      align-self: center;
+      flex: 0 0 39%;
+      width: 145px;
+    }
+ button {
+      @include button-green;
+  }
+}
+
+.mobile__menu {
+  display: none;
+}
+
