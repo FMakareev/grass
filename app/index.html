@@ -3,11 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--антисиний в safari -->
+    <meta name="format-detection" content="telephone=no">
     <title>Document</title>
     <!--<link rel="stylesheet" href="css/normalize.css">-->
     <!--<link rel="stylesheet" href="css/fonts.css">-->
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.css">
+
+
+
+    <link rel="icon" href="img/16x16.png" type="image/x-icon">
+    <link rel="icon" href="img/32x32.png" type="image/x-icon">
+    <link rel="icon" href="img/57x57.png" type="image/x-icon">
+    <link rel="icon" href="img/60x60.png" type="image/x-icon">
+    <link rel="icon" href="img/72x72.png" type="image/x-icon">
+    <link rel="icon" href="img/76x76.png" type="image/x-icon">
+    <link rel="icon" href="img/96x96.png" type="image/x-icon">
+    <link rel="icon" href="img/114x114.png" type="image/x-icon">
+    <link rel="icon" href="img/120x120.png" type="image/x-icon">
+    <link rel="icon" href="img/144x144.png" type="image/x-icon">
+    <link rel="icon" href="img/152x152.png" type="image/x-icon">
+    <link rel="icon" href="img/192x192.png" type="image/x-icon">
+    <link rel="icon" href="img/310x150.png" type="image/x-icon">
+    <link rel="icon" href="img/310x310.png" type="image/x-icon">
 
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic"
@@ -30,7 +49,7 @@
             </div>
 
             <div class="menu__contacts contacts">
-                <a class="contacts__link" href="tel: +7(678)456-78-67">+7(678)456-78-67</a>
+                <a class="contacts__link" href="tel: +7(812)346-59-75">+7(812)346-59-75</a>
                 <button class="button-green"><span>Перезвоните мне</span></button>
             </div>
 
@@ -42,7 +61,7 @@
                     <li><a href="#" class="bread__crunches">О нас</a></li>
                     <li><a href="#" class="bread__crunches">Оплата и доставка</a></li>
                     <li><a href="#" class="bread__crunches">Контакты</a></li>
-                    <li><a href="tel: +7(678)456-78-67">+7(678)456-78-67</a></li>
+                    <li><a href="tel: +7(812)346-59-75">+7(812)346-59-75</a></li>
                     <li>
                         <button class="button-green">Перезвоните мне</button>
                     </li>
@@ -127,8 +146,8 @@
                 <img src="img/close.svg" width="20" height="20" id="close" alt="close">
                 <h2>Ваш Матрас:</h2>
                 <span>Размеры</span>
-                <p>Длина 195 см, ширина 80 см, высота 15 см.</p>
-                <span>Стоимость:</span>
+                <p class="size">Длина 195 см, ширина 80 см, высота 15 см.</p>
+                <span class="sum">Стоимость:</span>
                 <input value="0" name="summ" class="summ" style="border: none; maxlength="10" type="text">
                 <img src="img/popup-matress.png" class="main-picture" alt="matress">
             </div>
@@ -141,79 +160,81 @@
             <div class="calculate__wrap">
                 <h2>Калькулятор</h2>
                 <div class="button-wrap"">
-                    <button class="button-toggle calculate__button calculate__button--adult">Взрослые</button>
-                    <button class="button-toggle calculate__button calculate__button--child">Детские</button>
+                    <button class="button-toggle calculate__button--adult">Взрослые</button>
+                    <button class="button-toggle calculate__button--child">Детские</button>
                 </div>
 
-                <div class="form">
+                <div class="form" id="calc">
+
 
                     <p>Степень жесткости</p>
 
-                    <select name="softy" id="select__softy">
-                        <option value="0" selected="selected">Выберите жесткость</option>
-                        <option value="soft">Мягкий</option>
-                        <option value="medium">Средний</option>
-                        <option value="hard">Жесткий</option>
-                    </select>
+                    <!--<select name="softy" id="select__softy">-->
+                        <!--<option value="0" selected="selected">Выберите жесткость</option>-->
+                        <!--<option value="soft">Мягкий</option>-->
+                        <!--<option value="medium">Средний</option>-->
+                        <!--<option value="hard">Жесткий</option>-->
+                    <!--</select>-->
 
 
                     <p>Размеры</p>
                     <div class="form__wrap">
                         <div class="select-wrap">
                             <select name="size" id="select__size">
-                                <option class="selectItem" value="0" selected="selected">Выберите размер</option>
-                                <option class="selectItem" value="12200">80см</option>
-                                <option class="selectItem" value="13480">90см</option>
-                                <option class="selectItem" value="16500">120см</option>
-                                <option class="selectItem" value="17300">140см</option>
-                                <option class="selectItem" value="18900">160см</option>
-                                <option class="selectItem" value="20700">180см</option>
-                                <option class="selectItem" value="23000">200см</option>
+                                <option class="selectItem" selected="selected">Выберите размер</option>
                             </select>
-                        </div>
+
+
                         <p>Чехол</p>
 
-                        <div class="form radio-wrap">
-                            <div class="radio-wrap__inner">
-                                <div class="radio__inner">
-                                    <input type="radio" class="selectItem" value="0" id="case-1" data-bind="checked: radio"  name="featured"  checked>
-                                    <label for="case-1"></label>
-                                    <span>Обычный</span>
-                                </div>
-                                <div class="radio__inner">
-                                    <input type="radio" class="selectItem" value="343" id="case-2" data-bind="checked: radio" name="featured" checked>
-                                    <label for="case-2"></label>
-                                    <span>Цветной<br> трикотаж</span>
-                                </div>
-                                <div class="radio__inner">
-                                    <input type="radio" class="selectItem" value="1430" id="case-3" data-bind="checked: radio" name="featured" checked>
-                                    <label for="case-3"></label>
-                                    <span>Велюр<br> дорогой</span>
-                                </div>
-                            </div>
+                        <select name="case" id="select__case">
+                            <option class="selectItem" selected="selected">Чехол</option>
+                        </select>
+
+                        <!--<div class="form radio-wrap">-->
+                            <!--<div class="radio-wrap__inner">-->
+                                <!--<div class="radio__inner" id="cases">-->
+                                    <!--<input type="radio" class="radioSelectItem" id="case-1" name="featured"  checked>-->
+                                    <!--<label for="case-1">Обычный</label>-->
+                                    <!--&lt;!&ndash;<span>Обычный</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="radio__inner">-->
+                                    <!--<input type="radio" class="radioSelectItem" id="case-2" name="featured" checked>-->
+                                    <!--<label for="case-2">Цветной <br> трикотаж</label>-->
+                                    <!--&lt;!&ndash;<span><br> трикотаж</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="radio__inner">-->
+                                    <!--<input type="radio" class="radioSelectItem" id="case-3" name="featured" checked>-->
+                                    <!--<label for="case-3">Велюр<br> дорогой</label>-->
+                                    <!--&lt;!&ndash;<span>Велюр<br> дорогой</span>&ndash;&gt;-->
+                                <!--</div>-->
+                            <!--</div>-->
 
                             <p>Внутреннее содержимое</p>
-                            <div class="radio_wrapper">
-                                <div class="radio-low__wrap">
-                                    <input type="radio" id="matress-1" class="selectItem" value="0" data-bind="checked: radio" name="inner" checked>
-                                    <label for="matress-1"></label>
-                                    <span>Ноу-хау  наполнение</span>
-                                </div>
-                                <div class="radio-low__wrap">
-                                    <input type="radio" id="matress-2" class="selectItem" value="3320" data-bind="checked: radio" name="inner" checked>
-                                    <label for="matress-2"></label>
-                                    <span>Блок независимых  пружин</span>
-                                </div>
-                                <div class="radio-low__wrap">
-                                    <input type="radio" id="matress-3" class="selectItem" value="3500" data-bind="checked: radio" name="inner" checked>
-                                    <label for="matress-3"></label>
-                                    <span>Беспружинный блок</span>
-                                </div>
-                            </div>
-
+                        <select name="inner" id="select__inner">
+                            <option class="selectItem" selected="selected">Внутреннее содержимое</option>
+                        </select>
+                            <!--<div class="radio_wrapper">-->
+                                <!--<div class="radio-low__wrap">-->
+                                    <!--<input type="radio" id="matress-1" class="selectItem" name="inner" checked>-->
+                                    <!--<label for="matress-1">Ноу-хау  наполнение</label>-->
+                                    <!--&lt;!&ndash;<span>Ноу-хау  наполнение</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="radio-low__wrap">-->
+                                    <!--<input type="radio" id="matress-2" class="selectItem" name="inner" checked>-->
+                                    <!--<label for="matress-2">Блок независимых  пружин</label>-->
+                                    <!--&lt;!&ndash;<span>Блок независимых  пружин</span>&ndash;&gt;-->
+                                <!--</div>-->
+                                <!--<div class="radio-low__wrap">-->
+                                    <!--<input type="radio" id="matress-3" class="selectItem" name="inner" checked>-->
+                                    <!--<label for="matress-3">Беспружинный блок</label>-->
+                                    <!--&lt;!&ndash;<span>Беспружинный блок</span>&ndash;&gt;-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        </div>
                             <button class="button-white" id="button-calculate">расчитать стоимость</button>
 
-                            <input value="0" name="summ" class="summ" readonly="readonly" style="border: medium none; background: none repeat scroll 0% 0% transparent; width: 200px;" maxlength="10" type="text">
+                            <!--<input value="0" name="summ" class="summ" readonly="readonly" style="border: medium none; background: none repeat scroll 0% 0% transparent; width: 200px;" maxlength="10" type="text">-->
                         </div>
                     </div>
                 </div>
@@ -281,19 +302,20 @@
             <!--<div>-->
             <!--<div class="slide_container">-->
             <!--<div class="why_container">-->
-            <!--<h2>Почему матрасы от “Травушки” <br>-->
-            <!--это выгодная покупка?</h2>-->
+
 
             <!--<div class="why_blocks_wrap">-->
             <div class="slide item">
+                <h2>Почему матрасы от “Травушки” <br>
+                    это выгодная покупка?</h2>
                 <div class="why-block">
-                    <div class="why-block__icons"><img src="img/Shape2.svg" alt="">
+                    <div class="why-block__icons"><img src="img/Shape2.svg" width="42" height="29" alt="">
                         <h2>10 лет <br>
                             гарантия</h2>
                         <p>На внутреннее <br>
                             содержание матрасов.</p>
                     </div>
-                    <div class="why-block__icons"><img src="img/Shape3.svg" alt="">
+                    <div class="why-block__icons"><img src="img/Shape3.svg" width="42" height="40" alt="">
                         <h2>11 лет опыта <br>
                             и знаний</h2>
                         <p>Воплощены в одной линейке <br>
@@ -305,7 +327,7 @@
 
             <div class="slide item">
                 <div class="why-block">
-                    <div class="why-block__icons"><img src="img/Shape4.svg" alt="">
+                    <div class="why-block__icons"><img src="img/Shape4.svg" width="44" height="37" alt="">
                         <h2>8 лет <br>
                             работы</h2>
                         <p>Только с госзаказами для <br>
@@ -313,7 +335,7 @@
                             особым требованиям.</p>
                     </div>
 
-                    <div class="why-block__icons"><img src="img/Shape5.svg" alt="">
+                    <div class="why-block__icons"><img src="img/Shape5.svg" width="42" height="29" alt="">
                         <h2>бесплатная <br>
                             доставка</h2>
                         <p>По Санкт-Петербургу.</p>
@@ -324,13 +346,13 @@
 
             <div class="slide item">
                 <div class="why-block">
-                    <div class="why-block__icons"><img src="img/Shape6.svg" alt="">
+                    <div class="why-block__icons"><img src="img/Shape6.svg" width="42" height="42" alt="">
                         <h2>возвращаем <br>
                             деньги</h2>
                         <p>Если матрас вам не понравился <br>
                             или оказался неудобным.</p>
                     </div>
-                    <div class="why-block__icons"><img src="img/Shape7.svg" alt="">
+                    <div class="why-block__icons"><img src="img/Shape7.svg" width="42" height="30" alt="">
                         <h2>Решаем проблемы <br>
                             напрямую</h2>
                         <p>Если возникли какие-либо проблемы <br>
@@ -504,9 +526,7 @@
                 <div class="feedback__text">
                     <h2>Контакты</h2>
                     <p>Телефон: </p>
-
-                    <h3>+7 (812) 346-59-75</h3>
-
+                    <a class="" href="tel: +7(812)346-59-75">+7(812)346-59-75</a>
                     <p>Почта: </p>
                     <h3>arevik_vk@inbox.ru</h3>
 
@@ -620,17 +640,21 @@
 <div class="popup">
     <div class="popup__container">
         <!--<a href="#"><img src="img/close.svg" id="close" width="15px" height="15px" alt="close"></a>-->
-        <h2>Свяжитесь с нами</h2>
-        <p> Оставьте свои данные в форме ниже и мы вам позвоним.</p>
+        <h2>Оформить заказ</h2>
+        <p> Оставьте свои данные, мы перезвоним и подберем для вас матрас.
+            Если матрас вам не подойдет, вы сможете вернуть свои деньги.</p>
 
         <div class="inputs">
+            <div class="inputs-wrap">
             <input type="text" class="input_time-name input_small" formmethod="post" name="name"
                    placeholder="Имя">
             <input type="tel" class="input_time-number input_small" formmethod="post"
                    name="phone"
                    placeholder="Введите свой номер">
-        </div>
-        <button formmethod="post" name="" id="close" class="popup__button">оставить заявку</button>
+
+        <button formmethod="post" name="" class="popup__button">оставить заявку</button>
+            </div>
+    </div>
     </div>
 </div>
 

@@ -69,7 +69,7 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   position: fixed;
-  background-color: #000;
+  background-color: $pink;
   opacity: .8;
   -moz-opacity: .8;
   filter: alpha(opacity=80);
@@ -94,13 +94,16 @@ body {
   box-shadow: 0 6px 21px 0 rgba(59, 59, 59, .1);
   &__button {
     @include button-green;
+    margin: 30px 0;
   }
 }
 
 .popup__container {
   padding: 5%;
+  width: 90%;
   height: inherit;
   justify-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
   h2 {
@@ -115,9 +118,55 @@ body {
   }
 }
 
-.inputs {
-  margin: 30px 0
+
+.mobile__menu {
+  margin-right: 2%;
+    button {
+      @include button-green;
+    }
 }
+
+
+#menu_bar {
+  display: none;
+  background-color: #fff;
+  opacity: .97;
+  right: 0;
+  top: 65px;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  padding-top: 20px;
+  font-size: 20px;
+  height: 100vh;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.mobile__menu ul li {
+  text-align: right;
+  margin-right: 12%;
+  list-style-type: none;
+}
+
+#menu_bar a {
+  text-decoration: none;
+  line-height: 42px;
+  text-transform: uppercase;
+  @include reg;
+}
+
+.inputs-wrap {
+  width: 80%;
+  margin-top: 40px;
+}
+
+.inputs {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
 
 .choose {
   display: flex;
@@ -307,6 +356,18 @@ body {
   margin-bottom: 40px;
 }
 
+.select-wrap {
+  select {
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.6);
+    border-style: solid;
+    width: 80%;
+    height: 40px;
+    background-color: $pink;
+    color: #ffffff;
+  }
+}
+
 .form > select#select__softy {
   border-width: 1px;
   border-color: rgba(255, 255, 255, 0.6);
@@ -317,16 +378,17 @@ body {
   color: #ffffff;
 }
 
-#select__size {
-  width: 80%;
-  border-width: 1px;
-  border-color: rgba(255, 255, 255, 0.6);
-  border-style: solid;
-  //width: 70px;
-  height: 40px;
-  background-color: #596089;
-  color: #ffffff;
-}
+
+//#select__size {
+//  width: 80%;
+//  border-width: 1px;
+//  border-color: rgba(255, 255, 255, 0.6);
+//  border-style: solid;
+//  //width: 70px;
+//  height: 40px;
+//  background-color: #596089;
+//  color: #ffffff;
+//}
 
 .form__wrap {
   display: flex;
@@ -415,7 +477,7 @@ input[type=radio]:checked + label:before {
   display: none;
 }
 
-.why {
+.why, .why__mobile {
   background-image: url("../img/bkg2.jpg");
   background-size: cover;
   background-position: center;
@@ -441,12 +503,8 @@ input[type=radio]:checked + label:before {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  //width: 88%;
   align-items: baseline;
   margin-top: 6%;
-  &__icons {
-    flex: 1 1 20%;
-  }
   h2 {
     margin: 0;
     text-align: left;
@@ -638,7 +696,7 @@ input[type=radio]:checked + label:before {
   button {
     @include button-green;
     margin-top: 29px;
-    margin-bottom: 92px;
+    margin-bottom: 63px;
   }
 }
 
@@ -646,11 +704,19 @@ input[type=radio]:checked + label:before {
 
 .feedback {
   display: flex;
+      &__text {
+        padding-left: 4%;
+      }
+      &__inner {
+        width: 64%;
+        min-height: 100vh;
+        background-color: $light-white;
+      }
 }
 
 .feedback__contacts {
   width: 521px;
-  //height: 100%;
+  height: 100%;
   //height: 663px;
   min-height: 100vh;
   background-color: $pink;
@@ -679,11 +745,6 @@ input[type=radio]:checked + label:before {
   }
 }
 
-.feedback__inner {
-  width: 62%;
-  min-height: 100vh;
-  background-color: $light-white;
-}
 
 .feedback__wrapper {
   padding-left: 17%;
@@ -714,7 +775,7 @@ textarea {
   height: 114px;
   padding: 14px 0 0 14px;
   outline: $green;
-  border: none;
+  border: 1px solid #dedede; ;
   @include reg;
   &:hover, &:checked {
     border: 1px solid $green;
@@ -745,6 +806,59 @@ input {
 
 .map img {
   width: 100%;
+}
+
+@media (min-width:1700px) {
+
+  .matress-wrap {
+    margin: 0 auto;
+    width: 60%;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1380px;
+  }
+
+
+  .why__container {
+    padding: 6%;
+    width: 71%;
+  }
+
+  .green-block {
+    width: 42%;
+  }
+
+  .select-wrap {
+    select {
+      width: 55%;
+    }
+  }
+  .feedback__container {
+    width: 42%;
+  }
+
+  .feedback__contacts {
+    width: 100%;
+  }
+
+  ul.accordion li:hover {
+    width: 35%;
+  }
+  .feedback__text {
+    padding-left:0;
+  }
+  .feedback__inner {
+    width: 58%;
+}
+}
+
+@media (min-width: 1440px) {
+ul.accordion li {
+    width: 265px;
+  }
 }
 
 @media (max-width: 1084px) {
@@ -785,15 +899,13 @@ input {
   .calculate__button {
     width: 25%;
   }
-  .form > select#mySelect {
-    border-width: 1px;
-    border-color: #ffffff;
-    border-style: solid;
-    width: 50%;
+
+  .select-wrap {
+    select {
+      width: 50%;
+    }
   }
-  select#mySelect {
-    width: 16.5%;
-  }
+
   .form button {
     margin: 60px 0;
   }
@@ -828,10 +940,12 @@ input {
   header img {
     height: 36%;
   }
-
   .menu {
     margin: 0 auto;
     width: 80%;
+      img {
+        margin: 0;
+      }
     &__inner {
       width: 90%;
       padding: 0 5%;
@@ -859,7 +973,6 @@ input {
     p {
       margin-bottom: 46px;
     }
-
   }
 
   .header__btn {
@@ -905,13 +1018,36 @@ input {
     min-height: 313px;
   }
 
-  .why_mobile {
+  .slide {
     display: block;
   }
 
-  .why_block {
-    flex-direction: column;
-    align-items: unset;
+  .why__mobile {
+    display: block;
+    h2 {
+      font-size: 21px;
+      display: block;
+    }
+      h2:nth-child(1) {
+        margin:  50px 0 0 10%;
+        padding: 0;
+        display: block;
+      }
+  }
+
+  .why-block {
+    margin-left: 10%;
+    //min-height: 100vh;
+    display: block;
+        img {
+          margin-bottom: 20px;
+          display: block;
+        }
+        p {
+          margin: 30px 0;
+          margin-bottom: 0;
+          display: block;
+        }
   }
 
   .choose__container {
@@ -945,16 +1081,7 @@ input {
     select#select__softy {
       width: 50%;
     }
-
-    #select__size {
-      width: 50%;
     }
-  }
-
-  .slide {
-    display: flex;
-    flex-direction: column;
-  }
 
   .know-how {
     background-position: bottom center;
@@ -1063,7 +1190,6 @@ input {
     flex-direction: column;
     align-items: center;
     margin: 5px 0;
-    width: 249px;
   }
 
   textarea {
@@ -1074,6 +1200,29 @@ input {
     flex-direction: column;
     justify-content: center;
   }
+
+  .popup__container {
+    h2 {
+      font-size: 21px;
+    }
+    button {
+      width: 100%;
+    }
+    input {
+      width: 92%;
+      max-width: 92%;
+    }
+  }
+}
+
+  .inputs {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
 }
 
 @media (max-width: 600px) {
@@ -1086,8 +1235,12 @@ input {
       font-size: 21px;
     }
   }
-
-  h2 {
+  .know-how h2,
+  .green-block .green-block__text h2,
+  .pink-wrap h2,
+  .feedback__contacts h2,
+  .slider-img h2,
+  .feedback__wrapper h2 {
     font-size: 21px;
   }
 
@@ -1096,7 +1249,8 @@ input {
     height: 100%;
   }
 
-  .feedback__contacts h3 {
+  .feedback__contacts a {
+    @include h3;
     font-size: 18px;
     margin-bottom: 30px;
   }
@@ -1117,6 +1271,16 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+    .pic:nth-child(5) {
+      margin-bottom: 63px;
+    }
+    button {
+      width: 100%;
+    }
+  }
+
+  .container__slider h2 {
+    margin-left: 8%;
   }
 
   .pic {
@@ -1152,13 +1316,15 @@ input {
     left: 0;
     right: 0;
     bottom: 0;
-    width: 60%;
+    width: 83%;
     padding-top: 110px;
-    padding-left: 10%;
+    //padding-left: 10%;
+    margin: 0 auto;
     z-index: 1;
         h2 {
           padding: 0;
           margin: 40px 0 0px 0;
+          min-width: 247px;
         }
 
   }
@@ -1167,29 +1333,34 @@ input {
 
 
 @media (max-width: 425px) {
-  .choose__button--adult,
-  .choose__button--child {
+
+  .button-toggle {
     width: 170px;
   }
 
-  .calculate__button--adult,
-  .calculate__button--child {
-    width: 170px;
+  .choose__block {
+    align-items: center;
   }
-  .choose__block button {
-    width: 80%;
+
+  .choose__block {
+    width: inherit;
+    button {
+      width: 91%;
+    }
+    br:nth-child(1) {
+      display: none;
+    }
 }
 
-  .calculate select#select__softy {
-    width: 100%;
+  .select-wrap {
+    select {
+      width: 100%;
+    }
   }
+    #button-calculate {
+      width: 100%;
+    }
 
-  #select__size {
-    width: 100%;
-  }
-  .calculate #select__size {
-    width: 100%;
-  }
 
   .radio__inner:nth-child(2) {
     margin-left: 10px;
@@ -1212,20 +1383,62 @@ input {
     margin-bottom: 48px;
   }
 
-  .slider-img button {
+  .content_wrap {
+    br {
+      display: none;
+    }
+  }
+
+  .why__mobile {
+  h2 {
+    font-size: 21px;
+  }
+  h2:nth-child(1) {
+    margin:  50px 0 0 10%;
+    padding: 0;
+  }
+  }
+  .why-block {
+    flex-direction: column;
+    align-items: unset;
+    margin-left: 10%;
+    img {
+      margin-bottom: 20px;
+    }
+    p {
+      margin: 20px 0;
+    }
+  }
+
+  .green-block {
+    button {
+      width: 100%;
+    }
+  }
+
+  .pink button {
     width: 100%;
   }
 
-  //.pink-wrap p:nth-child(last) {
-  //  margin:0;
-  //  padding:0;
-  //}
-  //
-  //.pink-wrap h2:nth-child(2) {
-  //  margin-top: 44px;
-  //  margin-bottom: 48px;
-  //}
+  .input-wrap {
+    input:nth-child(1) {
+      margin-bottom: 20px;
+    }
+  }
 
+   input {
+    width: 95%;
+    max-width: 95%;
+    margin: 0;
+  }
+
+  textarea {
+    width: 95%;
+  }
+
+  .feedback__inner button {
+    width: 100%;
+  }
 
 }
 
@@ -1234,12 +1447,11 @@ input {
 
 .menu {
   margin: 0 auto;
-  width: 95%;
+  width: 91%;
       &__img{
           margin: 0;
         }
 }
-
 
 .choose__matress {
   width: 95%;
@@ -1247,8 +1459,40 @@ input {
 }
 
 .container {
-  width: 95%;
+  width: 91%;
 }
+.matress-wrap {
+    margin: 0 auto;
+    width: 91%;
+}
+.calculate__wrap {
+  width: 91%;
+}
+
+  .why-block {
+    margin-left: 4%;
+  }
+
+  .why__mobile h2:nth-child(1) {
+    margin: 30px 0 0 4%;
+    padding: 0;
+  }
+
+  .green-block__text {
+    width: 91%;
+  }
+
+  .container__slider h2 {
+    margin-left: 0;
+  }
+  .feedback__text {
+    margin: 0 auto;
+    width: 91%;
+  }
+  .feedback__wrapper {
+    width: 91%;
+  }
+
 }
 
 

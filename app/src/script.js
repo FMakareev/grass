@@ -2,8 +2,25 @@
  * Created by ASUS on 02.11.2017.
  */
 
-
 // burger
+
+$("#baar").click(function (t) {
+    var $message = $("#menu_bar");
+    if ($message.css('display') != 'block') {
+        $message.show();
+
+        var firstClick = true;
+        $(document).bind('click.myEvent', function (t) {
+            if (!firstClick && $(t.target).closest("#menu_bar").length == 0) {
+                $message.hide();
+                $(document).unbind('click.myEvent');
+            }
+            firstClick = false;
+        });
+    }
+    t.preventDefault();
+});
+
 
 
 
@@ -38,7 +55,7 @@ $(".owl-carousel").owlCarousel({
     autoplay: true,
     autoplayTimeout: 2000,
     autoplayHoverPause: true,
-    margin: 0,
+    margin: 600,
     slideBy: 1,
     items: 1,
     center: !0,
@@ -120,15 +137,18 @@ $(".owl-carousel").owlCarousel({
 //     });
 // });
 
-$(document).change('.varRadio', function () {
-    var score = 0;
-$(".selectItem:checked").each(function(){
-        score += parseInt($(this).val());
-        var summ = score += parseInt($(this).val());
-        console.log(summ);
-        $(".summ").val(summ);
-    });
-});
+
+// рабочий калькулятор на value
+
+// $(document).change('.varRadio', function () {
+//     var score = 0;
+// $(".selectItem:checked").each(function(){
+//         score += parseInt($(this).val());
+//         var summ = score += parseInt($(this).val());
+//         console.log(summ);
+//         $(".summ").val(summ);
+//     });
+// });
 
 //отловили изменение в состояние checked
 //изначальный 0
@@ -149,3 +169,120 @@ $('#button-calculate').click(function() {
 $('#close').click(function () {
     $(".choose__popup").hide();
 });
+
+
+
+
+$(function() {
+    var selectSize,                       //размеры
+        selectPrice,                       //цена
+        selectInner,                   //наполнение
+        selectCase = 0,               //чехол фиксированная зависит от размера (endpaper)
+        sum = 0;
+
+        matresSize = {
+            "80":{12200: "Матрас с эффектом памяти",  11200: ["Эластичный", "Ортопедический"] },
+            "90":{13480: "Матрас с эффектом памяти",  12480: ["Эластичный", "Ортопедический"]},
+            "120":{16500: "Матрас с эффектом памяти",  15500: ["Эластичный", "Ортопедический"]},
+        },
+
+        matresCase = {
+            "80": {343: "Обычный", 430: "Велюр"},
+            "90": {374: "Обычный", 560: "Велюр"},
+            "120": {468: "Обычный", 950: "Велюр"},
+    },
+        matresInner = {
+               "memory": {
+                    "80": {3320: "springs", 3500: "nonsprings"},
+                    "90": {3490: "springs", 3880: "nonsprings"},
+                    "120": {5180: "springs", 6370: "nonsprings"},
+                },
+                "elastic": {
+                    "80": {2320: "springs", 2500: "nonsprings"},
+                    "90": {2490: "springs", 2880: "nonsprings"},
+                    "120": {4418: "springs", 5370: "nonsprings"},
+                },
+                "orthopedic": {
+                    "80": {2320: "springs", 2500: "nonsprings"},
+                    "90": {2490: "springs", 2880: "nonsprings"},
+                    "120": {4418: "springs", 5370: "nonsprings"},
+                }
+        };
+
+    // console.log(matresInner.memory);
+
+        function insertMatresSize() {
+            var html = '',
+                size,
+                price;
+        for(size in matresSize) {                                    //интерация пройдет по размерам(80, 90, 120..
+            for(price in matresSize[size]) {
+                html += '<option data-size="'+ size +'" data-price="'+ price +'">'+ size +' '+ matresSize[size][price] + ' ' + price +'</option>';     //запишем данные размера и цены в html
+            }
+        }
+
+            $('#select__size').append(html);                       //выведем данные
+
+    }
+
+    function changeSize() {
+    sum = selectCase = 0;                                         //обнулим сумму чтобы при перезагрузке норм отображ
+    selectSize = $('#calc option').filter(':selected').data('size');
+    selectPrice = $('#calc option').filter(':selected').data('price');
+
+    insertCase();
+    // recalc();
+
+    }
+
+
+    function insertCase() {
+    var html = '<option selected>Выберите чехол</option>',
+        price;
+
+    for(price in matresCase[selectSize])
+        html += '<option data-price="' + price + '">'+ matresCase[selectSize][price] +' '+ price +'</option>';
+        $('#select__case').append(html);
+    }
+
+    function changeCase() {
+        selectCase = $('#select__case option').filter(':selected').data('price');
+        console.log(selectCase);
+        recalc();
+    }
+
+    function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
+
+    function recalc() {
+    selectPrice = isNumeric(selectPrice) ? selectPrice:0;
+    selectCase = isNumeric(selectCase) ? selectCase:0;
+    sum = selectPrice+selectCase;
+    // changeFinal()
+    }
+
+    // changeFinal() {
+    //
+    // }
+
+    // function recalc() {
+    //
+    // }
+
+
+     insertMatresSize();
+
+
+
+    $('#select__size').change(function() {
+        changeSize();
+    });
+
+    $('#select__case').change(function() {
+        changeCase();
+    });
+
+});
+
