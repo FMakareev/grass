@@ -20,6 +20,10 @@ ul.accordion li {
   overflow: hidden;
 }
 
+ul.accordion li:nth-child(1) {
+  width: 420px;
+  overflow: hidden;
+}
 
 ul.accordion img{
   width: 495px;
@@ -47,6 +51,7 @@ ul.accordion li{
   cursor:pointer;
   display:block;
   transition: all 1.5s;
+  background-color: #fff;
 }
 
 ul.accordion li:hover{

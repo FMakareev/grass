@@ -1,6 +1,14 @@
 /**
  * Created by ASUS on 02.11.2017.
  */
+// animation
+var animation = new TimelineMax();
+animation
+    .fromTo('.menu__img', 2, {y: -80, opacity: 0 }, {y:0, opacity: 1 })
+    .fromTo('.list', 0.6, {y:-30, opacity: 0 }, {y:0, opacity: 1 }, 1)
+    .fromTo('.contacts', 1, {y: -100, opacity: 0 }, {y:0, opacity: 1 })
+
+new WOW().init();
 
 // burger
 
@@ -157,17 +165,25 @@ $(".owl-carousel").owlCarousel({
 //задаем переменную summ
 //summ в консоль
 
-$('#button-calculate').click(function() {
-    $(".choose__popup")
-        .css('display', 'block')
-        .animate({opacity: 1}, 200);
-    // $("#close").click(function () {
-    //     $(".choose__popup").hide();
+//
+    $('#button-calculate').click(function() {
+        function choosePopup() {
+        $(".choose__popup")
+            .css('display', 'block')
+            .animate({
+                opacity: 1,
+                // width: "linear",
+                // marginLeft: "3in",
+                left:+10
+            }, 2000);
+        }
+    choosePopup();
 });
 
 
+
 $('#close').click(function () {
-    $(".choose__popup").hide();
+    $(".choose__popup").hide()
 });
 
 

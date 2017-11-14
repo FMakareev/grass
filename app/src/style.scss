@@ -1,8 +1,12 @@
+@import url('global/normalize.scss');
+@import url('global/fonts.scss');
+@import url('global/variables.scss');
 @import url('blocks/header.scss');
 @import url('blocks/slider_img.scss');
 @import url('blocks/footer.scss');
-@import url('global/variables.scss');
-@import url('blocks/blocks.scss');
+
+
+//@import url('blocks/blocks.scss');
 
 :root {
   font-size: 16px;
@@ -28,6 +32,7 @@ body {
   h1 {
     @include h1;
     margin-top: 106px;
+    //margin-top: 136px;
     margin-bottom: 45px;
     color: $dark-gray;
   }
@@ -40,6 +45,14 @@ body {
     @include h1;
     color: $green;
   }
+}
+
+span.header__content--feature {
+  @include reg;
+  text-transform: none;
+  display: block;
+  padding-bottom: 30px;
+  //margin-top: 200px;
 }
 
 .header__btn {
@@ -95,6 +108,7 @@ body {
   &__button {
     @include button-green;
     margin: 30px 0;
+    align-self: center;
   }
 }
 
@@ -157,14 +171,15 @@ body {
 }
 
 .inputs-wrap {
-  width: 80%;
-  margin-top: 40px;
+    justify-content: space-evenly;
+    display: flex;
 }
 
 .inputs {
   margin: 30px 0;
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
 }
 
 
@@ -205,7 +220,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: 186px 0;
+  margin: 124px 0;
 }
 
 .choose__block {
@@ -216,6 +231,7 @@ body {
 
   p {
     @include reg;
+    margin-top: 20px;
   }
   button {
     @include button-white;
@@ -262,7 +278,7 @@ body {
   position: absolute;
   z-index: 2;
   right: 0;
-  left: 0;
+  left: -100%;
   background-color: #fff;
   height: 100%;
 
@@ -345,8 +361,9 @@ body {
     margin: 30px 0;
   }
   button {
-    @include button-white;
-    background-color: $pink;
+    @include button-green;
+    //@include button-white;
+    //background-color: $green;
     margin-top: 60px;
     margin-left: 0;
   }
@@ -377,18 +394,6 @@ body {
   background-color: $pink;
   color: #ffffff;
 }
-
-
-//#select__size {
-//  width: 80%;
-//  border-width: 1px;
-//  border-color: rgba(255, 255, 255, 0.6);
-//  border-style: solid;
-//  //width: 70px;
-//  height: 40px;
-//  background-color: #596089;
-//  color: #ffffff;
-//}
 
 .form__wrap {
   display: flex;
@@ -501,7 +506,7 @@ input[type=radio]:checked + label:before {
 
 .why-block {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0 auto;
   align-items: baseline;
   margin-top: 6%;
@@ -513,8 +518,10 @@ input[type=radio]:checked + label:before {
 }
 
 .why-block__icons {
+    flex: 1 1 20%;
   img {
     border-style: none;
+    margin-bottom: 20px;
   }
   h2 {
     margin: 0;
@@ -614,7 +621,7 @@ input[type=radio]:checked + label:before {
   align-items: center;
   button {
     @include button-pink;
-    margin-top: 29px;
+    margin-top: 65px;
     margin-bottom: 71px;
     display: block;
   }
@@ -633,6 +640,7 @@ input[type=radio]:checked + label:before {
     h3 {
       @include h3;
       color: $white;
+      margin-bottom: 20px;
       margin-top: 0;
     }
   }
@@ -644,6 +652,7 @@ input[type=radio]:checked + label:before {
   button {
     @include button-green;
     margin-bottom: 94px;
+    margin-top: 64px;
   }
 }
 
@@ -704,6 +713,7 @@ input[type=radio]:checked + label:before {
 
 .feedback {
   display: flex;
+  max-height: 600px;
       &__text {
         padding-left: 4%;
       }
@@ -718,7 +728,6 @@ input[type=radio]:checked + label:before {
   width: 521px;
   height: 100%;
   //height: 663px;
-  min-height: 100vh;
   background-color: $pink;
   display: flex;
   flex-direction: column;
@@ -742,6 +751,16 @@ input[type=radio]:checked + label:before {
     @include regular_white;
     margin: 0;
     padding: 0;
+  }
+
+  .connect {
+    font-family: "MADEWaffleSoft", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.21px;
+    color: #ffffff;
+    margin-top: 0;
+    text-decoration: none;
+    font-size: 21px;
   }
 }
 
@@ -808,19 +827,35 @@ input {
   width: 100%;
 }
 
+@media (min-width:1900px) {
+  .matress-wrap {
+    width: 61%;
+  }
+}
+
+
 @media (min-width:1700px) {
 
-  .matress-wrap {
-    margin: 0 auto;
-    width: 60%;
+  .header__content {
+    h1 {
+      margin-top: 136px;
+    }
   }
+
+  span.header__content--feature {
+    margin-top: 200px;
+  }
+
+  //.matress-wrap {
+  //  margin: 0 auto;
+  //  width: 67%;
+  //}
 
   .container {
     margin: 0 auto;
     width: 80%;
     max-width: 1380px;
   }
-
 
   .why__container {
     padding: 6%;
@@ -836,6 +871,7 @@ input {
       width: 55%;
     }
   }
+
   .feedback__container {
     width: 42%;
   }
@@ -853,12 +889,32 @@ input {
   .feedback__inner {
     width: 58%;
 }
+  .know-how {
+   min-height: 600px;
+  }
+  .fake-map {
+    min-height: 600px;
+  }
+  .green-block {
+    min-height: 600px;
+  }
+  ul.accordion li {
+    width: 300px;
+  }
 }
 
 @media (min-width: 1440px) {
 ul.accordion li {
     width: 265px;
   }
+
+}
+
+@media (min-width: 1120px) {
+  .choose {
+    max-height: 800px;
+  }
+
 }
 
 @media (max-width: 1084px) {
@@ -916,6 +972,10 @@ ul.accordion li {
 
   .fake-map__wrap {
     display: block;
+  }
+
+  .feedback {
+    height: 100%;
   }
 
   .feedback__container {
@@ -1037,8 +1097,8 @@ ul.accordion li {
 
   .why-block {
     margin-left: 10%;
-    //min-height: 100vh;
     display: block;
+    justify-content: space-around;
         img {
           margin-bottom: 20px;
           display: block;
@@ -1158,6 +1218,7 @@ ul.accordion li {
   }
 
   .feedback {
+    max-height: 100%;
     flex-direction: column;
     &__text {
       margin: 0 auto;
@@ -1207,23 +1268,23 @@ ul.accordion li {
     }
     button {
       width: 100%;
+      align-self: center;
     }
     input {
       width: 92%;
       max-width: 92%;
     }
   }
-}
 
   .inputs {
-    margin: 30px 0;
-    display: flex;
-    justify-content: space-around;
     flex-direction: column;
-    width: 100%;
-    align-items: center;
+  }
 
+  .inputs-wrap {
+    flex-direction: column;
+  }
 }
+
 
 @media (max-width: 600px) {
 
@@ -1332,7 +1393,7 @@ ul.accordion li {
 
 
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
 
   .button-toggle {
     width: 170px;
@@ -1430,6 +1491,10 @@ ul.accordion li {
     width: 95%;
     max-width: 95%;
     margin: 0;
+  }
+
+  .input_time-number {
+    margin-top: 10px;
   }
 
   textarea {

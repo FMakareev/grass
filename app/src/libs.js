@@ -5,3 +5,4 @@
 @@include('../libs/owlcarousel/owl.carousel.min.js');
 @@include('../libs/knockout.js');
 @@include('../libs/jquery.magnific-popup.js');
+@@include('../libs/wow/wow.min.js');
