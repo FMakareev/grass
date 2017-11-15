@@ -168,31 +168,28 @@ $(".owl-carousel").owlCarousel({
 //
     $('#button-calculate').click(function() {
         function choosePopup() {
-        $(".choose__popup")
-            .css('display', 'block')
+        $(".choose__popup").fadeIn()
             .animate({
-                opacity: 1,
-                // width: "linear",
-                // marginLeft: "3in",
-                left:+10
-            }, 2000);
+                'left': '50',
+                opacity: 1
+            }, 500);
+
+        $('#close').click(function () {
+            $(".choose__popup").fadeOut()
+                .animate({
+                    'left': '-50',
+                    opacity: 0
+                }, 200);
+        });
         }
-    choosePopup();
+        choosePopup();
 });
-
-
-
-$('#close').click(function () {
-    $(".choose__popup").hide()
-});
-
-
 
 
 $(function() {
     var selectSize,                       //размеры
         selectPrice,                       //цена
-        selectInner,                   //наполнение
+        selectInner = 0,                   //наполнение
         selectCase = 0,               //чехол фиксированная зависит от размера (endpaper)
         sum = 0;
 
@@ -208,24 +205,24 @@ $(function() {
             "120": {468: "Обычный", 950: "Велюр"},
     },
         matresInner = {
-               "memory": {
-                    "80": {3320: "springs", 3500: "nonsprings"},
-                    "90": {3490: "springs", 3880: "nonsprings"},
-                    "120": {5180: "springs", 6370: "nonsprings"},
+               "Матрас с эффектом памяти": {
+                    "80": {3320: "Пружинный", 3500: "Беспружинный"},
+                    "90": {3490: "Пружинный", 3880: "Беспружинный"},
+                    "120": {5180: "Пружинный", 6370: "Беспружинный"},
                 },
-                "elastic": {
-                    "80": {2320: "springs", 2500: "nonsprings"},
-                    "90": {2490: "springs", 2880: "nonsprings"},
-                    "120": {4418: "springs", 5370: "nonsprings"},
+                "Эластичный": {
+                    "80": {2320: "Пружинный", 2500: "Беспружинный"},
+                    "90": {2490: "Пружинный", 2880: "Беспружинный"},
+                    "120": {4418: "Пружинный", 5370: "Беспружинный"},
                 },
-                "orthopedic": {
-                    "80": {2320: "springs", 2500: "nonsprings"},
-                    "90": {2490: "springs", 2880: "nonsprings"},
-                    "120": {4418: "springs", 5370: "nonsprings"},
+                "Ортопедический": {
+                    "80": {2320: "Пружинный", 2500: "Беспружинный"},
+                    "90": {2490: "Пружинный", 2880: "Беспружинный"},
+                    "120": {4418: "Пружинный", 5370: "Беспружинный"},
                 }
         };
 
-    // console.log(matresInner.memory);
+    // console.log(matresInner);
 
         function insertMatresSize() {
             var html = '',
@@ -241,13 +238,40 @@ $(function() {
 
     }
 
+
+    function insertMatresInner() {
+        var html = '',
+            type,
+            size,
+            price;
+
+        for(type in matresInner) {
+        for(size in matresInner[type]) {
+            for(price in matresInner[type][size]) {
+                html += '<option data-type="'+ type +'"  data-size="'+ size +'" data-price="'+ price +'">'+ type +' '+ size +' '+ matresInner[type][size][price] + ' ' + price +'</option>';     //запишем данные размера и цены в html
+
+            }
+
+        }
+
+    }
+
+        $('#select__inner').html(html);                       //выведем данные
+
+    }
+
     function changeSize() {
-    sum = selectCase = 0;                                         //обнулим сумму чтобы при перезагрузке норм отображ
+    sum = selectCase = 0,
+          selectInner = 0;
+    //обнулим сумму чтобы при перезагрузке норм отображ
     selectSize = $('#calc option').filter(':selected').data('size');
     selectPrice = $('#calc option').filter(':selected').data('price');
 
+    // console.log(selectSize, selectPrice);
     insertCase();
-    // recalc();
+    insertInner();
+
+    recalc();
 
     }
 
@@ -258,39 +282,52 @@ $(function() {
 
     for(price in matresCase[selectSize])
         html += '<option data-price="' + price + '">'+ matresCase[selectSize][price] +' '+ price +'</option>';
-        $('#select__case').append(html);
+        $('#select__case').html(html);
     }
 
     function changeCase() {
         selectCase = $('#select__case option').filter(':selected').data('price');
-        console.log(selectCase);
+        recalc();
+    }
+
+    function insertInner() {
+        var html = '<option selected>Выберите наполнение</option>',
+            price;
+
+        for(price in matresInner[selectSize])
+            html += '<option data-price="' + price + '">'+ matresInner[selectSize][price] +' '+ price +'</option>';
+        $('#select__inner').append(html);
+    }
+
+    function changeInner() {
+        selectCase = $('#select__inner option').filter(':selected').data('price');
         recalc();
     }
 
     function isNumeric(n) {
-            return !isNaN(parseFloat(n)) && isFinite(n);
+        return !isNaN(parseFloat(n)) && isFinite(n);
     }
 
 
     function recalc() {
     selectPrice = isNumeric(selectPrice) ? selectPrice:0;
     selectCase = isNumeric(selectCase) ? selectCase:0;
-    sum = selectPrice+selectCase;
-    // changeFinal()
+    selectInner = isNumeric(selectInner) ? selectInner:0;
+    sum = selectPrice + selectCase + selectInner;
+    changeFinal()
     }
 
-    // changeFinal() {
-    //
-    // }
+    function changeFinal() {
+        $('.size').text (selectSize);
+        $('.sum').text (sum);
+    }
 
     // function recalc() {
     //
     // }
 
-
-     insertMatresSize();
-
-
+    insertMatresSize();
+    insertMatresInner();
 
     $('#select__size').change(function() {
         changeSize();
@@ -298,6 +335,10 @@ $(function() {
 
     $('#select__case').change(function() {
         changeCase();
+    });
+
+    $('#select__inner').change(function() {
+        changeInner();
     });
 
 });

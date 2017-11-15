@@ -278,7 +278,7 @@ span.header__content--feature {
   position: absolute;
   z-index: 2;
   right: 0;
-  left: -100%;
+  left: -600px;
   background-color: #fff;
   height: 100%;
 
@@ -310,7 +310,7 @@ span.header__content--feature {
 
 .container__popup {
   margin: 0 auto;
-  width: 80%;
+  width: 90%;
   background: #fff;
   height: 700px;                    //will change
 }
