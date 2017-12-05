@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--антисиний в safari -->
     <meta name="format-detection" content="telephone=no">
-    <title>Document</title>
+    <title>Травушка: Ортопедические матрацы с ноу хау наполнителем</title>
     <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <script type="text/javascript" src="js/anchorScroller.js"></script>
 
 
     <link rel="icon" href="img/16x16.png" type="image/x-icon">
@@ -29,39 +29,45 @@
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic"
           rel="stylesheet">
-
 </head>
 <body>
+<div id="preloader"></div>
 <div class="hero">
     <header class="header">
         <div class="menu">
-            <img class="menu__img" src="img/logo.svg" alt="">
+            <img class="menu__img" src="img/logo.png" alt="">
             <div class="menu__list">
                 <ul class="menu__list list">
-                    <li><a href="#" class="list__link list__link--active">Главная</a></li>
-                    <li><a href="#" class="list__link">Каталог</a></li>
-                    <li><a href="#" class="list__link">О нас</a></li>
-                    <li><a href="#" class="list__link">Оплата и доставка</a></li>
-                    <li><a href="#" class="list__link">Контакты</a></li>
+                    <li><a href="#main" onclick="return anchorScroller(this)" class="list__link list__link--active">Главная</a>
+                    </li>
+                    <li><a href="#catalog" onclick="return anchorScroller(this)" class="list__link">Каталог</a></li>
+                    <li><a href="#about_us" onclick="return anchorScroller(this)" class="list__link">О нас</a></li>
+                    <li><a href="#payment" onclick="return anchorScroller(this)" class="list__link">Оплата и
+                        доставка</a></li>
+                    <li><a href="#contacts" onclick="return anchorScroller(this)" class="list__link">Контакты</a></li>
                 </ul>
             </div>
 
             <div class="menu__contacts contacts">
                 <a class="contacts__link" href="tel: +7(812)346-59-75">+7(812)346-59-75</a>
-                <button class="button-green"><span>Перезвоните мне</span></button>
+                <button class="button-green button-application"><span>Перезвоните мне</span></button>
             </div>
 
 
             <div class="mobile__menu">
                 <ul id="menu_bar">
-                    <li><a href="#" class="bread__crunches">Главная</a></li>
-                    <li><a href="#" class="bread__crunches">Каталог</a></li>
-                    <li><a href="#" class="bread__crunches">О нас</a></li>
-                    <li><a href="#" class="bread__crunches">Оплата и доставка</a></li>
-                    <li><a href="#" class="bread__crunches">Контакты</a></li>
+                    <li><a href="#main" onclick="return anchorScroller(this)" class="bread__crunches">Главная</a></li>
+                    <li><a href="#catalog" onclick="return anchorScroller(this)" class="bread__crunches">Каталог</a>
+                    </li>
+                    <li><a href="#about-us__mobile" onclick="return anchorScroller(this)" class="bread__crunches">О
+                        нас</a></li>
+                    <li><a href="#payment" onclick="return anchorScroller(this)" class="bread__crunches">Оплата и
+                        доставка</a></li>
+                    <li><a href="#contacts" onclick="return anchorScroller(this)" class="bread__crunches">Контакты</a>
+                    </li>
                     <li><a href="tel: +7(812)346-59-75">+7(812)346-59-75</a></li>
                     <li>
-                        <button class="button-green">Перезвоните мне</button>
+                        <button class="button-green button-application"><span>Перезвоните мне</span></button>
                     </li>
                 </ul>
                 <div class="bar">
@@ -70,31 +76,30 @@
             </div>
         </div>
 
-
         <div class="container">
+            <a name="main"></a>
             <div class="header__content">
-                <h1 class="wow fadeInUp" data-wow-duration="2s">Ортопедические матрасы <br>
+                <h1 class="wow fadeInUp" data-wow-duration="1.5s">Ортопедические матрасы <br>
                     <span>от 15 000 руб </span>от производителя<br>
                     с доставкой уже послезавтра<br>
                     и гарантией <span>10 лет*</span></h1>
 
-                <p class="wow fadeInUp" data-wow-duration="2s">Мы производим матрасы под индивидуальные <br>
+                <p class="wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">Мы производим матрасы под
+                    индивидуальные <br>
                     требования каждого клиента.</p>
 
-                <div class="header__btn wow fadeInUp" data-wow-duration="2s">
+                <div class="header__btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
                     <p>Оставьте заявку и мы подберем <br>
                         подходящую для вас комплектацию <br>
                         матраса.</p>
-                    <button class="button button-green">Оставить заявку</button>
+                    <button class="button button-green button-application">Оставить заявку</button>
                 </div>
 
                 <span class="header__content--feature">*Гарантия распространяется только на внутреннее содержимое матрасов </span>
-
             </div>
         </div>
-
-
     </header>
+
     <section class="choose">
         <div class="choose__matress">
             <div class="matress-wrap wow fadeInUp">
@@ -104,38 +109,64 @@
                     вариант
                 </h2>
 
-                <div class="button-wrap">
-                    <button class="button-toggle choose__button--adult">Взрослые</button>
+                <div class="button-wrap button-wrap_price">
+                    <button class="button-toggle choose__button--adult button-toggle_active">Взрослые</button>
                     <button class="button-toggle choose__button--child">Детские</button>
                 </div>
+                <div class="choose__blocks">
+                    <div class="choose__block-wrap choose__block-wrap_active">
+                        <div class="choose__block">
+                            <img src="img/matress.svg" alt="matress">
+                            <p>Матрас ортопедический <br>
+                                эластичный жесткий <br>
+                                комбинированный</p>
 
-                <div class="choose__block-wrap">
-                    <div class="choose__block">
-                        <img src="img/matress.svg" alt="matress">
-                        <p>Матрас ортопедический <br>
-                            эластичный жесткий <br>
-                            комбинированный</p>
+                            <a href="#calculate" onclick="return anchorScroller(this)" class="button-white">расчитать
+                                стоимость</a>
+                        </div>
 
-                        <button class="button-white">расчитать стоимость</button>
+                        <div class="choose__block">
+                            <img src="img/matress.svg" alt="matress">
+                            <p>Матрас ортопедический <br>
+                                эластичный жесткий <br>
+                                комбинированный</p>
+
+                            <a href="#calculate" onclick="return anchorScroller(this)" class="button-white">расчитать
+                                стоимость</a>
+                        </div>
+
+                        <div class="choose__block">
+                            <img src="img/matress.svg" alt="matress">
+                            <p>Матрас ортопедический <br>
+                                эластичный жесткий <br>
+                                комбинированный</p>
+                            <a href="#calculate" onclick="return anchorScroller(this)" class="button-white">расчитать
+                                стоимость</a>
+                        </div>
                     </div>
+                    <div class="choose__block-wrap">
 
-                    <div class="choose__block">
-                        <img src="img/matress.svg" alt="matress">
-                        <p>Матрас ортопедический <br>
-                            эластичный жесткий <br>
-                            комбинированный</p>
+                        <div class="choose__block">
+                            <img src="img/matress.svg" alt="matress">
+                            <p>Матрас ортопедический <br>
+                                эластичный жесткий <br>
+                                комбинированный</p>
 
-                        <button class="button-white">расчитать стоимость</button>
-                    </div>
+                            <a href="#calculate" onclick="return anchorScroller(this)" class="button-white">расчитать
+                                стоимость</a>
+                        </div>
 
-                    <div class="choose__block">
-                        <img src="img/matress.svg" alt="matress">
-                        <p>Матрас ортопедический <br>
-                            эластичный жесткий <br>
-                            комбинированный</p>
-                        <button class="button-white">расчитать стоимость</button>
+                        <div class="choose__block">
+                            <img src="img/matress.svg" alt="matress">
+                            <p>Матрас ортопедический <br>
+                                эластичный жесткий <br>
+                                комбинированный</p>
+                            <a href="#calculate" onclick="return anchorScroller(this)" class="button-white">расчитать
+                                стоимость</a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -143,111 +174,106 @@
 
         <div class="choose__popup">
             <div class="container__popup">
-                <img src="img/close.svg" width="20" height="20" id="close" alt="close">
+                <img src="img/close.svg" width="20" height="20" id="close" class="close" alt="close">
                 <h2>Ваш Матрас:</h2>
-                <span>Размеры</span>
-                <p class="size"></p>
+                <p id="name-order">
+                </p>
+                <span>Размеры:</span>
+                <p id="popup-size">
+                </p>
                 <span>Стоимость:</span>
-                <span class="sum"></span>
-                <!--<input value="0" name="summ" class="summ" style="border: none; maxlength="10" type="text">-->
-                <img src="img/popup-matress.png" class="main-picture" alt="matress">
+                <p class="sum" id="popup-price"></p>
+                <img src="" class="main-picture" alt="">
             </div>
         </div>
 
-
-
-
         <div class="calculate">
+            <a name="calculate"></a>
             <div class="calculate__wrap wow fadeInUp">
                 <h2>Калькулятор</h2>
-                <div class="button-wrap"">
-                    <button class="button-toggle calculate__button--adult">Взрослые</button>
+                <div class="button-wrap button-wrap_calculate">
+                    <button class="button-toggle calculate__button--adult button-toggle_active">Взрослые</button>
                     <button class="button-toggle calculate__button--child">Детские</button>
                 </div>
-
-                <div class="form" id="calc">
-
-
-                    <p>Степень жесткости</p>
-
-                    <!--<select name="softy" id="select__softy">-->
-                        <!--<option value="0" selected="selected">Выберите жесткость</option>-->
-                        <!--<option value="soft">Мягкий</option>-->
-                        <!--<option value="medium">Средний</option>-->
-                        <!--<option value="hard">Жесткий</option>-->
-                    <!--</select>-->
-
-
-                    <p>Размеры</p>
-                    <div class="form__wrap">
-                        <div class="select-wrap">
-                            <select name="size" id="select__size">
-                                <option class="selectItem" selected="selected">Выберите размер</option>
-                            </select>
-
-
-                        <p>Чехол</p>
-
-                        <select name="case" id="select__case">
-                            <option class="selectItem"</option>
+                <div class="calculate__form-wrap">
+                    <div class="form form-calc form-calc_active" id="calc">
+                        <p>Степень жесткости</p>
+                        <select name="softy" id="select__softy">
+                            <option></option>
                         </select>
+                        <p>Размеры</p>
+                        <div class="form__wrap">
+                            <div class="select-wrap">
+                                <select name="size" id="select__size">
+                                    <option></option>
+                                </select>
 
-                        <!--<div class="form radio-wrap">-->
-                            <!--<div class="radio-wrap__inner">-->
-                                <!--<div class="radio__inner" id="cases">-->
-                                    <!--<input type="radio" class="radioSelectItem" id="case-1" name="featured"  checked>-->
-                                    <!--<label for="case-1">Обычный</label>-->
-                                    <!--&lt;!&ndash;<span>Обычный</span>&ndash;&gt;-->
-                                <!--</div>-->
-                                <!--<div class="radio__inner">-->
-                                    <!--<input type="radio" class="radioSelectItem" id="case-2" name="featured" checked>-->
-                                    <!--<label for="case-2">Цветной <br> трикотаж</label>-->
-                                    <!--&lt;!&ndash;<span><br> трикотаж</span>&ndash;&gt;-->
-                                <!--</div>-->
-                                <!--<div class="radio__inner">-->
-                                    <!--<input type="radio" class="radioSelectItem" id="case-3" name="featured" checked>-->
-                                    <!--<label for="case-3">Велюр<br> дорогой</label>-->
-                                    <!--&lt;!&ndash;<span>Велюр<br> дорогой</span>&ndash;&gt;-->
-                                <!--</div>-->
-                            <!--</div>-->
+                                <p>Чехол</p>
 
-                            <p>Внутреннее содержимое</p>
-                        <select name="inner" id="select__inner">
-                            <option class="selectItem" selected="selected">Внутреннее содержимое</option>
-                        </select>
-                            <!--<div class="radio_wrapper">-->
-                                <!--<div class="radio-low__wrap">-->
-                                    <!--<input type="radio" id="matress-1" class="selectItem" name="inner" checked>-->
-                                    <!--<label for="matress-1">Ноу-хау  наполнение</label>-->
-                                    <!--&lt;!&ndash;<span>Ноу-хау  наполнение</span>&ndash;&gt;-->
-                                <!--</div>-->
-                                <!--<div class="radio-low__wrap">-->
-                                    <!--<input type="radio" id="matress-2" class="selectItem" name="inner" checked>-->
-                                    <!--<label for="matress-2">Блок независимых  пружин</label>-->
-                                    <!--&lt;!&ndash;<span>Блок независимых  пружин</span>&ndash;&gt;-->
-                                <!--</div>-->
-                                <!--<div class="radio-low__wrap">-->
-                                    <!--<input type="radio" id="matress-3" class="selectItem" name="inner" checked>-->
-                                    <!--<label for="matress-3">Беспружинный блок</label>-->
-                                    <!--&lt;!&ndash;<span>Беспружинный блок</span>&ndash;&gt;-->
-                                <!--</div>-->
-                            <!--</div>-->
+                                <select name="case" id="select__case">
+                                    <option></option>
+                                </select>
+                                <p>Внутреннее содержимое</p>
+                                <select name="inner" id="select__inner">
+                                    <option></option>
+                                </select>
+                            </div>
+                            <button class="button-white button-calculate" id="button-calculate">расчитать стоимость
+                            </button>
                         </div>
-                            <button class="button-white" id="button-calculate">расчитать стоимость</button>
+                    </div>
+                    <div class="form form-calc" id="calc-child">
+                        <p>Размеры</p>
+                        <div class="form__wrap">
+                            <div class="select-wrap">
+                                <select name="size" id="select__size_child">
+                                    <option></option>
+                                </select>
+
+
+                                <p>Чехол</p>
+
+                                <select name="case" id="select__case_child">
+                                    <option></option>
+                                </select>
+
+                                <p>Внутреннее содержимое</p>
+                                <select name="inner" id="select__inner_child">
+                                    <option></option>
+                                </select>
+
+                            </div>
+                            <button class="button-white button-calculate" id="button-calculate">расчитать стоимость
+                            </button>
 
                             <!--<input value="0" name="summ" class="summ" readonly="readonly" style="border: medium none; background: none repeat scroll 0% 0% transparent; width: 200px;" maxlength="10" type="text">-->
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="choose__popup--mobile">
+                <div class="container__popup">
+                    <img src="img/close.svg" width="20" height="20" id="close-mobile" class="close" alt="close">
+                    <h2>Ваш Матрас:</h2>
+                    <p id="name-order">
+                    </p>
+                    <span>Размеры:</span>
+                    <p id="popup-size">
+                    </p>
+                    <span>Стоимость:</span>
+                    <p class="sum" id="popup-price"></p>
+                    <img src="" class="main-picture" alt="">
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="why">
+        <a name="about_us"></a>
         <div class="why__container wow fadeInUp">
             <h2>Почему матрасы от “Травушки” <br>
                 это выгодная покупка?</h2>
-        <div class="why__blocks-wrap">
+            <div class="why__blocks-wrap">
 
                 <div class="why-block wow fadeInUp">
                     <div class="why-block__icons"><img src="img/Shape2.svg" alt="">
@@ -299,6 +325,9 @@
     </section>
 
     <section class="why__mobile">
+        <a name="about-us__mobile"></a>
+        <h2>Почему матрасы от “Травушки” <br>
+            это выгодная покупка?</h2>
         <div id="why_we" class="owl-carousel owl-theme loop">
             <!--<div>-->
             <!--<div class="slide_container">-->
@@ -307,8 +336,6 @@
 
             <!--<div class="why_blocks_wrap">-->
             <div class="slide item">
-                <h2>Почему матрасы от “Травушки” <br>
-                    это выгодная покупка?</h2>
                 <div class="why-block">
                     <div class="why-block__icons"><img src="img/Shape2.svg" width="42" height="29" alt="">
                         <h2>10 лет <br>
@@ -364,6 +391,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
     <section class="know-how">
@@ -402,27 +430,67 @@
         </div>
     </section>
 
-    <section class="fake-map">
-            <div class="green-block">
-                <div class="green-block__text wow fadeInUp">
-                    <h2>Доставка</h2>
-                    <p>Доставка по Санкт-Петербургу</p>
-                    <h3>Бесплатно</h3>
-                    <p>Доставка по ЛО</p>
-                    <h3>20 руб/км</h3>
-                    <h2>Оплата </h2>
-                    <p>Вы можете оплатить ваш матрас на сайте, <br>
-                         внеся предоплату или оплатив полностью. </p>
-                    <button class="button button-green">Перейти к оплате</button>
-                </div>
-            </div>
 
+    <div id="overlay"></div>
+    <div class="popup-certificate">
+        <img src="img/close-white.svg" id="close-certificate" class="close-white" width="15" height="15" alt="">
+        <img src="img/certificate.jpg" alt="">
+    </div>
+
+    <section class="fake-map">
+        <a name="payment"></a>
+        <div class="green-block">
+            <div class="green-block__text wow fadeInUp">
+                <h2>Доставка</h2>
+                <p>Доставка по Санкт-Петербургу</p>
+                <h3>Бесплатно</h3>
+                <p>Доставка по ЛО</p>
+                <h3>20 руб/км</h3>
+                <h2>Оплата </h2>
+                <p>Вы можете оплатить ваш матрас на сайте, <br>
+                     внеся предоплату или оплатив полностью. </p>
+                <button class="button button-green button-payment">Перейти к оплате</button>
+            </div>
+        </div>
     </section>
-<div class="first-map"></div>
-    <section class="pink">
+
+    <div id="overlay"></div>
+    <div class="popup-payment">
+        <div class="popup__container">
+            <a href="#"><img src="img/close-white.svg" id="close-white" class="close-white" width="15" height="15"
+                             alt="close"></a>
+            <h2>Оформить заказ</h2>
+            <p> Оставьте свои данные, мы перезвоним и подберем для вас матрас.
+                Если матрас вам не подойдет, вы сможете вернуть свои деньги.</p>
+            <div class="inputs">
+                <div class="inputs-wrap">
+                    <input type="text" class="input_time-name input_small" formmethod="post"
+                           name="name"
+                           placeholder="Имя">
+
+                    <input type="tel" class="input_time-number input_small" formmethod="post"
+                           name="phone"
+                           placeholder="Введите свой номер">
+
+                    <input type="text" class="input_time-number input_small" formmethod="post"
+                           name="mail"
+                           placeholder="Введите свою электронную почту">
+
+                    <input type="number" class="input_time-number input_small" formmethod="post"
+                           name="pay"
+                           placeholder="Стоимость предоплаты">
+                </div>
+                <button formmethod="post" name="" class="popup__button">оплатить</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="first-map"></div>
+    <section class="purple">
         <div class="container">
-            <div class="pink-wrap wow fadeInUp">
-                <div class="pink__column">
+            <div class="purple-wrap wow fadeInUp">
+                <div class="purple__column">
                     <h2>возможно вы думаете,  что...</h2>
                     <h3>хороший=дорогой</h3>
 
@@ -433,7 +501,7 @@
                     <p>Мы предлагаем беспроигрышный вариант: качество <br>
                          по умеренной цене.</p>
 
-                    <h3><span>Необычный</span> матрас является целебным <br></h3>
+                    <h3><span>Необычный</span> матрас <br>  является целебным <br></h3>
                     <p>Матрасы с частичками серебра, матрасы с добавками минералов <br>
                         - все это пустой маркетинг. Лечебные свойства таких матрасов <br>
                          сомнительны, если вообще существуют.   <br></p>
@@ -444,7 +512,7 @@
                     </p>
                 </div>
 
-                <div class="pink__column">
+                <div class="purple__column">
                     <h2>вы, конечно,  можете...</h2>
                     <h3>Купить более <span> дорогой/ <br>  дешевый</span> матрас</h3>
 
@@ -460,7 +528,8 @@
                     <p>Вам даже не придется мучиться выбором. Ортопедические <br>
                          матрасы “Травушка” универсальны и подойдут каждому. <br></p>
 
-                    <button class="button button-green">расчитать стоимость</button>
+                    <a href="#calculate" onclick="return anchorScroller(this)" class="button button-green">расчитать
+                        стоимость</a>
 
                 </div>
             </div>
@@ -470,57 +539,85 @@
 
 
     <section class="slider-img">
+        <a name="catalog"></a>
         <div class="container container__slider wow fadeInUp">
             <h2>Помимо матрасов  <br>
                 мы производим 
             </h2>
             <div class="dws-wrapper">
                 <ul class="accordion">
-                    <li><img src="img/slide1.jpg" alt=""><h4>Подушки</h4></li>
-                    <li><img src="img/slide2.jpg" alt=""><h4>покрывала</h4></li>
-                    <li><img src="img/slide3.jpg" alt=""><h4>одеяла</h4></li>
-                    <li><img src="img/slide4.jpg" alt=""><h4>постельное <br>  белье</h4></li>
-                    <li><img src="img/slide5.jpg" alt=""><h4>детские<br>спальные<br>комплекты </h4></li>
-
+                    <li class="accordion-item"><img src="img/slide1-original.jpg" alt=""><h4>Подушки</h4> <a
+                            class="button accordion-button accordion-button--active">Узнать больше</a></li>
+                    <li class="accordion-item"><img src="img/slide2-original.jpg" alt=""><h4>покрывала</h4> <a
+                            class="button accordion-button">Узнать больше</a></li>
+                    <li class="accordion-item"><img src="img/slide3-original.jpg" alt=""><h4>одеяла</h4> <a
+                            class="button accordion-button">Узнать больше</a></li>
+                    <li class="accordion-item"><img src="img/slide4-original.jpg" alt=""><h4>постельное <br>  белье</h4>
+                        <a class="button accordion-button">Узнать больше</a></li>
+                    <li class="accordion-item"><img src="img/slide5-original.jpg" alt=""><h4>детские<br>спальные<br>комплекты 
+                    </h4> <a class="button accordion-button">Узнать больше</a></li>
                 </ul>
             </div>
-            <button class="button button-green hide_me">узнать больше</button>
 
             <div class="slider-img__mobile">
-                <div class="pic" style="background-image:url(../img/slide1.jpg)">
+                <div class="pic" style="background-image:url(img/slide1.jpg)">
                     <div class="content_wrap">
                         <h2>Подушки</h2>
-                        <button class="button button-green">узнать больше</button>
+                        <button class="button button-green slider__button-green">узнать больше</button>
                     </div>
                 </div>
-                <div class="pic" style="background-image:url(../img/slide2.jpg)">
+                <div class="pic" style="background-image:url(img/slide2.jpg)">
                     <div class="content_wrap">
                         <h2>покрывала</h2>
-                        <button class="button button-green">узнать больше</button>
+                        <button class="button button-green slider__button-green ">узнать больше</button>
                     </div>
                 </div>
-                <div class="pic" style="background-image:url(../img/slide3.jpg)">
+                <div class="pic" style="background-image:url(img/slide3.jpg)">
                     <div class="content_wrap">
                         <h2>одеяла</h2>
-                        <button class="button button-green">узнать больше</button>
+                        <button class="button button-green slider__button-green">узнать больше</button>
                     </div>
                 </div>
-                <div class="pic" style="background-image:url(../img/slide4.jpg)">
+                <div class="pic" style="background-image:url(img/slide4.jpg)">
                     <div class="content_wrap">
                         <h2>постельное  белье</h2>
-                        <button class="button button-green">узнать больше</button>
+                        <button class="button button-green slider__button-green">узнать больше</button>
                     </div>
                 </div>
-                <div class="pic" style="background-image:url(../img/slide5.jpg)">
+                <div class="pic" style="background-image:url(img/slide5.jpg)">
                     <div class="content_wrap">
                         <h2>детские комплекты </h2>
-                        <button class="button button-green">узнать больше</button>
+                        <button class="button button-green slider__button-green">узнать больше</button>
                     </div>
                 </div>
+            </div>
             </div>
     </section>
 
+    <div id="overlay"></div>
+    <div class="popup-accordion">
+        <div class="popup__container">
+            <a href="#"><img src="img/close-white.svg" id="close" class="close-white" width="15" height="15"
+                             alt="close"></a>
+            <h2>Хотите больше узнать о прочей продукции?</h2>
+            <p>Оставьте заявку и мы с удовольствием познакомим вас с ней</p>
+
+            <div class="inputs">
+                <div class="inputs-wrap">
+                    <input type="text" class="input_time-name input_small" formmethod="post" name="name"
+                           placeholder="Имя">
+                    <input type="tel" class="input_time-number input_small" formmethod="post"
+                           name="phone"
+                           placeholder="Введите свой номер">
+                </div>
+                <button formmethod="post" name="" class="popup__button">оставить заявку</button>
+
+            </div>
+        </div>
+    </div>
+
     <section class="feedback">
+        <a name="contacts"></a>
         <div class="feedback__container">
             <div class="feedback__contacts">
                 <div class="feedback__text wow fadeInUp">
@@ -531,9 +628,8 @@
                     <b><a class="connect" href="mailto:arevik_vk@inbox.ru">arevik_vk@inbox.ru</a></b>
                     <p>Адрес: </p>
                     <h3>СПб, Богатырский пр., <br>
-                         д. 18 корп. 2, лит. Б <br>
+                         д. 18 корп. 4, сек. 1 <br>
                          офис № 307 и № 309 <br>(4этаж)</h3>
-
                 </div>
             </div>
         </div>
@@ -549,12 +645,11 @@
                     <input type="text" name="name" placeholder="Имя">
                     <input type="tel" name="phone" placeholder="Номер">
                 </div>
-                <textarea>Ваш вопрос</textarea>
+                <textarea placeholder="Ваш вопрос"></textarea>
                 <button class="button button-green">отправить</button>
             </div>
         </div>
     </section>
-
 
     <div id="map"></div>
 
@@ -562,7 +657,7 @@
         function initMap() {
             var options = {
                 zoom: 15,
-                center: {lat: 59.933079, lng: 30.272973},
+                center: {lat: 59.996923, lng: 30.257248},
                 styles: [{
                     "featureType": "water",
                     "elementType": "geometry",
@@ -619,61 +714,55 @@
 
             var map = new
             google.maps.Map(document.getElementById('map'), options);
-
-
             var marker = new google.maps.Marker({
-                position: {lat: 59.933076, lng: 30.272973},
+                position: {lat: 59.996923, lng: 30.257248},
                 map: map,
                 icon: src = 'img/pointer.png'
             });
         }
-
-        //    $('.gm-style-mtc').css('display', 'none');
-        //    $('.gm-svpc').css('display', 'none');
     </script>
 </div>
-</div>
+
 
 
 <div id="overlay"></div>
 <div class="popup">
     <div class="popup__container">
-        <!--<a href="#"><img src="img/close.svg" id="close" width="15px" height="15px" alt="close"></a>-->
+        <a href="#"><img src="img/close-white.svg" id="close" class="close-white" width="15" height="15"
+                         alt="close"></a>
         <h2>Оформить заказ</h2>
         <p> Оставьте свои данные, мы перезвоним и подберем для вас матрас.
             Если матрас вам не подойдет, вы сможете вернуть свои деньги.</p>
 
         <div class="inputs">
             <div class="inputs-wrap">
-            <input type="text" class="input_time-name input_small" formmethod="post" name="name"
-                   placeholder="Имя">
-            <input type="tel" class="input_time-number input_small" formmethod="post"
-                   name="phone"
-                   placeholder="Введите свой номер">
+                <input type="text" class="input_time-name input_small" formmethod="post" name="name"
+                       placeholder="Имя">
+                <input type="tel" class="input_time-number input_small" formmethod="post"
+                       name="phone"
+                       placeholder="Введите свой номер">
             </div>
-        <button formmethod="post" name="" class="popup__button">оставить заявку</button>
+            <button formmethod="post" name="" class="popup__button">оставить заявку</button>
 
-    </div>
+        </div>
     </div>
 </div>
-
-
 <footer>
     <div class="footer-wrap">
         <div class="wrap__inner">
-            <p>2017 Травушка</p>
+            <p>© 2017 Травушка</p>
         </div>
         <div class="wrap__inner">
-            <p>Разработанно студией <span>Boroda</span></p>
+            <p>Разработанно студией <a href="http://borodaboroda.com/">Boroda</a></p>
         </div>
     </div>
 </footer>
-
 
 <script src="js/libs.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzppVOcMfaQB-M2e9BVwdB19ETFV2lECc&callback=initMap"
         type="text/javascript"></script>
 <script src="js/script.js"></script>
+
 </body>
 </html>

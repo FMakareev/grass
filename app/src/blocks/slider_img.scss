@@ -12,6 +12,7 @@ ul.accordion{
   width: inherit;
   height: inherit;
   max-width: 100%;
+  background: #fff;
 }
 
 ul.accordion li {
@@ -19,6 +20,17 @@ ul.accordion li {
   width: 265px;
   overflow: hidden;
 }
+
+//ul.accordion li a {
+//  display: none;
+//  width:50px;
+//  height:42px;
+//  background-color: green;
+//  position: absolute;
+//  &:hover {
+//    display: block;
+//  }
+//}
 
 ul.accordion li:nth-child(1) {
   width: 420px;
@@ -29,6 +41,9 @@ ul.accordion img{
   width: 495px;
   height: 329px;
   opacity: 0.5;
+    a {
+
+    }
 }
 
 ul.accordion li:nth-child(1) img {
@@ -51,7 +66,6 @@ ul.accordion li{
   cursor:pointer;
   display:block;
   transition: all 1.5s;
-  background-color: #fff;
 }
 
 ul.accordion li:hover{
@@ -59,6 +73,47 @@ ul.accordion li:hover{
   //box-shadow:1px 5px 15px $green;
   transition: all 1s;
 }
+
+.accordion-button {
+    display: none;
+}
+
+.accordion-button--active {
+  a {
+    display: block;
+    @include button-purple;
+    line-height: 45px;
+    text-align: center;
+    margin: 80px 0;
+  }
+}
+
+
+
+
+
+//.accordion-item img:nth-child(1) {
+//  mask: url('../img/slide1.jpg');
+//}
+//
+//.accordion-item img:nth-child(2) {
+//  mask: url('../img/slide2.jpg');
+//}
+//
+//.accordion-item img:nth-child(3) {
+//  mask: url('../img/slide3.jpg');
+//}
+//
+//.accordion-item img:nth-child(4) {
+//  mask: url('../img/slide4.jpg');
+//}
+//
+//.accordion-item img:nth-child(5) {
+//  mask: url('../img/slide5.jpg');
+//}
+
+
+
 
 
 //ul.accordion li:nth-child(1){

@@ -97,7 +97,17 @@ gulp.task('css-libs', function() {
 
 /* ======== ТАСК "JS" ======== */
 gulp.task('js', function() {
-    return gulp.src(app + 'src/script.js') // Берём все необходимые скрипты
+    return gulp.src(app + 'src/js/*.js') // Берём все необходимые скрипты
+        .pipe(plumber(err)) // Отслеживаем ошибки
+        .pipe(include()) // Собираем их в один файл
+        .pipe(gulp.dest(dist + 'js')) // Выгружаем
+        .pipe(reload({stream: true})); //Перезагружаем сервер
+});
+/* ================================ */
+
+/* ======== ТАСК "Json" ======== */
+gulp.task('json', function() {
+    return gulp.src(app + 'json/*.json') // Берём все необходимые скрипты
         .pipe(plumber(err)) // Отслеживаем ошибки
         .pipe(include()) // Собираем их в один файл
         .pipe(gulp.dest(dist + 'js')) // Выгружаем
@@ -154,6 +164,7 @@ gulp.task('build', function(callback) {
             'sass',
             'css-libs',
             'js',
+            'json',
             'js-libs',
             'img',
             'fonts'

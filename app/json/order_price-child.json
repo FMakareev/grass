@@ -1,0 +1,44 @@
+{
+  "order_price": [
+    {
+      "id_order": 1,
+      "id_size": 1,
+      "price": 3800
+    },
+    {
+      "id_size": 2,
+      "id_order": 1,
+      "price": 3900
+    },
+    {
+      "id_size": 3,
+      "id_order": 1,
+      "price": 4300
+    },
+    {
+      "id_size": 4,
+      "id_order": 1,
+      "price": 4600
+    },
+    {
+      "id_size": 5,
+      "id_order": 1,
+      "price": 6400
+    },
+    {
+      "id_size": 6,
+      "id_order": 1,
+      "price": 6700
+    },
+    {
+      "id_size": 7,
+      "id_order": 1,
+      "price": 8000
+    },
+    {
+      "id_order": 1,
+      "id_size": 8,
+      "price": 8500
+    }
+  ]
+}

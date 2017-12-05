@@ -10,8 +10,8 @@ $green: #7cb159;
 $dark-green: #669c43;
 $light-brown: #388659;
 $brown: #256a42;
-$dark-pink: #484d6d;
-$pink: #596089;
+$dark-purple: #484d6d;
+$purple: #596089;
 
 $path: '../';
 
@@ -114,6 +114,7 @@ $path: '../';
   transition: background-color .1s ease;
   outline: none;
   background-color: #fff;
+  cursor: pointer;
   &:hover {
     border: 1px solid $green;
     background-color: $green;
@@ -138,6 +139,7 @@ $path: '../';
   transition: background-color .1s ease;
   outline: none;
   line-height: 41px; //for center
+  cursor: pointer;
   &:hover {
     border: 1px solid $light-brown;
     background-color: $light-brown;
@@ -150,25 +152,26 @@ $path: '../';
 }
 }
 
-@mixin button-pink {
+@mixin button-purple {
   width: 205px;
   height: 44px;
-  border: 1px solid $dark_pink;
-  background-color: $dark_pink;
+  border: 1px solid $dark_purple;
+  background-color: $dark_purple;
   @include menu_roboto;
   color: $white;
   text-transform: uppercase;
   letter-spacing: 0.7px;
   transition: background-color .1s ease;
   outline: none;
+  cursor: pointer;
   &:hover {
-    border: 1px solid $pink;
-    background-color: $pink;
+    border: 1px solid $purple;
+    background-color: $purple;
     color: #ffffff;
 }
   &:active {
-    border: 1px solid $pink;
-    background-color: $pink;
+    border: 1px solid $purple;
+    background-color: $purple;
     color: #ffffff
 }
 }

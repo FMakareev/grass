@@ -1,6 +1,6 @@
 {
-  "name": "travushka",
-  "version": "0.0.1",
+  "name": "travushka_damir",
+  "version": "0.0.2",
   "description": "There is the main layout of gulp-projects.",
   "author": "Ilya",
   "license": "ISC",
@@ -26,7 +26,7 @@
     "imagemin-pngquant": "^5.0.0",
     "path": "^0.12.7",
     "run-sequence": "^1.2.2"
-  },
+  }
   "dependencies": {
     "susy": "^3.0.1"
   }

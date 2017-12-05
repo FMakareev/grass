@@ -6,12 +6,12 @@
   height: 50px;
   justify-content: space-between;
   padding: 0 3%;
-  background-color: $pink;
+  background-color: $purple;
     p {
       @include reg;
       color: $light-white;
     }
-  span {
+  a {
     @include link;
   }
 }

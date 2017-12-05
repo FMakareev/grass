@@ -1,0 +1,109 @@
+{
+  "case_price": [
+    {
+      "id_type": 1,
+      "id_size": 1,
+      "price": 0
+    },
+    {
+      "id_type": 1,
+      "id_size": 2,
+      "price": 0
+    },
+    {
+      "id_type": 1,
+      "id_size": 3,
+      "price": 0
+    },
+    {
+      "id_type": 1,
+      "id_size": 4,
+      "price": 0
+    },
+    {
+      "id_type": 1,
+      "id_size": 5,
+      "price": 0
+    },
+    {
+      "id_type": 1,
+      "id_size": 6,
+      "price": 0
+    },
+    {
+      "id_type": 1,
+      "id_size": 7,
+      "price": 0
+    },
+    {
+      "id_type": 2,
+      "id_size": 1,
+      "price": 343
+    },
+    {
+      "id_type": 2,
+      "id_size": 2,
+      "price": 374
+    },
+    {
+      "id_type": 2,
+      "id_size": 3,
+      "price": 468
+    },
+    {
+      "id_type": 2,
+      "id_size": 4,
+      "price": 530
+    },
+    {
+      "id_type": 2,
+      "id_size": 5,
+      "price": 608
+    },
+    {
+      "id_type": 2,
+      "id_size": 6,
+      "price": 686
+    },
+    {
+      "id_type": 2,
+      "id_size": 7,
+      "price": 749
+    },
+    {
+      "id_type": 3,
+      "id_size": 1,
+      "price": 1430
+    },
+    {
+      "id_type": 3,
+      "id_size": 2,
+      "price": 1560
+    },
+    {
+      "id_type": 3,
+      "id_size": 3,
+      "price": 1950
+    },
+    {
+      "id_type": 3,
+      "id_size": 4,
+      "price": 2210
+    },
+    {
+      "id_type": 3,
+      "id_size": 5,
+      "price": 2535
+    },
+    {
+      "id_type": 3,
+      "id_size": 6,
+      "price": 2860
+    },
+    {
+      "id_type": 3,
+      "id_size": 7,
+      "price": 3120
+    }
+  ]
+}
