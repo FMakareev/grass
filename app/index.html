@@ -7,8 +7,14 @@
     <meta name="format-detection" content="telephone=no">
     <title>Травушка: Ортопедические матрацы с ноу хау наполнителем</title>
     <link rel="stylesheet" href="css/libs.min.css">
+    <!--<link rel="stylesheet" href="css/fonts.css">-->
+    <!--<link rel="stylesheet" href="css/fontss.css">-->
+    <!--<link rel="stylesheet" href="css/fontsss.css">-->
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/anchorScroller.js"></script>
+
+
+    <script type="text/javascript" src="js/AnchorScroller.js"></script>
+
 
 
     <link rel="icon" href="img/16x16.png" type="image/x-icon">
@@ -27,8 +33,6 @@
     <link rel="icon" href="img/310x310.png" type="image/x-icon">
 
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&amp;subset=cyrillic"
-          rel="stylesheet">
 </head>
 <body>
 <div id="preloader"></div>
@@ -49,7 +53,7 @@
             </div>
 
             <div class="menu__contacts contacts">
-                <a class="contacts__link" href="tel: +7(812)346-59-75">+7(812)346-59-75</a>
+                <a class="contacts__link" href="tel: +7(812)346-59-75">+7 (812) 346-59-75</a>
                 <button class="button-green button-application"><span>Перезвоните мне</span></button>
             </div>
 
@@ -176,13 +180,13 @@
             <div class="container__popup">
                 <img src="img/close.svg" width="20" height="20" id="close" class="close" alt="close">
                 <h2>Ваш Матрас:</h2>
-                <p id="name-order">
+                <p class="name-order">
                 </p>
                 <span>Размеры:</span>
-                <p id="popup-size">
+                <p class="popup-size">
                 </p>
                 <span>Стоимость:</span>
-                <p class="sum" id="popup-price"></p>
+                <p class="sum popup-price"></p>
                 <img src="" class="main-picture" alt="">
             </div>
         </div>
@@ -198,27 +202,27 @@
                 <div class="calculate__form-wrap">
                     <div class="form form-calc form-calc_active" id="calc">
                         <p>Степень жесткости</p>
-                        <select name="softy" id="select__softy">
-                            <option></option>
+                        <select class="decorated" name="softy" id="select__softy">
+                            <option>Выберите степень жесткости</option>
                         </select>
                         <p>Размеры</p>
                         <div class="form__wrap">
                             <div class="select-wrap">
                                 <select name="size" id="select__size">
-                                    <option></option>
+                                    <option>Выберите размеры</option>
                                 </select>
 
                                 <p>Чехол</p>
 
                                 <select name="case" id="select__case">
-                                    <option></option>
+                                    <option>Выберите чехол</option>
                                 </select>
                                 <p>Внутреннее содержимое</p>
                                 <select name="inner" id="select__inner">
-                                    <option></option>
+                                    <option>Выберите содержимое</option>
                                 </select>
                             </div>
-                            <button class="button-white button-calculate" id="button-calculate">расчитать стоимость
+                            <button class="button-calculate" id="button-calculate">расчитать стоимость
                             </button>
                         </div>
                     </div>
@@ -227,19 +231,19 @@
                         <div class="form__wrap">
                             <div class="select-wrap">
                                 <select name="size" id="select__size_child">
-                                    <option></option>
+                                    <option>Выберите размеры</option>
                                 </select>
 
 
                                 <p>Чехол</p>
 
                                 <select name="case" id="select__case_child">
-                                    <option></option>
+                                    <option>Выберите чехол</option>
                                 </select>
 
                                 <p>Внутреннее содержимое</p>
                                 <select name="inner" id="select__inner_child">
-                                    <option></option>
+                                    <option>Выберите содержимое</option>
                                 </select>
 
                             </div>
@@ -255,13 +259,13 @@
                 <div class="container__popup">
                     <img src="img/close.svg" width="20" height="20" id="close-mobile" class="close" alt="close">
                     <h2>Ваш Матрас:</h2>
-                    <p id="name-order">
+                    <p class="name-order">
                     </p>
                     <span>Размеры:</span>
-                    <p id="popup-size">
+                    <p class="popup-size">
                     </p>
                     <span>Стоимость:</span>
-                    <p class="sum" id="popup-price"></p>
+                    <p class="sum popup-price"></p>
                     <img src="" class="main-picture" alt="">
                 </div>
             </div>
@@ -276,21 +280,21 @@
             <div class="why__blocks-wrap">
 
                 <div class="why-block wow fadeInUp">
-                    <div class="why-block__icons"><img src="img/Shape2.svg" alt="">
-                        <h2>10 лет <br>
-                            гарантия</h2>
+                    <div class="why-block__icons"><img src="img/why-midle.svg" alt="">
+                        <h3>10 лет <br>
+                            гарантия</h3>
                         <p>На внутреннее <br>
                             содержание матрасов.</p>
                     </div>
-                    <div class="why-block__icons"><img src="img/Shape3.svg" alt="">
-                        <h2>11 лет опыта <br>
-                            и знаний</h2>
+                    <div class="why-block__icons"><img src="img/why-hat.svg" alt="">
+                        <h3>11 лет опыта <br>
+                            и знаний</h3>
                         <p>Воплощены в одной линейке <br>
                             ортопедических матрасов.</p>
                     </div>
-                    <div class="why-block__icons "><img src="img/Shape4.svg" alt="">
-                        <h2>8 лет <br>
-                            работы</h2>
+                    <div class="why-block__icons "><img src="img/why-bird.svg" alt="">
+                        <h3>8 лет <br>
+                            работы</h3>
                         <p>Только с госзаказами для <br>
                             медучереждений по их <br>
                             особым требованиям.</p>
@@ -299,20 +303,20 @@
 
 
                 <div class="why-block wow fadeInUp">
-                    <div class="why-block__icons"><img src="img/Shape5.svg" alt="">
-                        <h2>бесплатная <br>
-                            доставка</h2>
+                    <div class="why-block__icons"><img src="img/why-delivery.svg" alt="">
+                        <h3>бесплатная <br>
+                            доставка</h3>
                         <p>По Санкт-Петербургу.</p>
                     </div>
-                    <div class="why-block__icons"><img src="img/Shape6.svg" alt="">
-                        <h2>возвращаем <br>
-                            деньги</h2>
+                    <div class="why-block__icons"><img src="img/why-money.svg" alt="">
+                        <h3>возвращаем <br>
+                            деньги</h3>
                         <p>Если матрас вам не понравился <br>
                             или оказался неудобным.</p>
                     </div>
-                    <div class="why-block__icons"><img src="img/Shape7.svg" alt="">
-                        <h2>Решаем проблемы <br>
-                            напрямую</h2>
+                    <div class="why-block__icons"><img src="img/why-message.svg" alt="">
+                        <h3>Решаем проблемы <br>
+                            напрямую</h3>
                         <p>Если возникли какие-либо проблемы <br>
                             или вы хотите оформить возврат, вам не надо <br>
                             ничего писать и ожидать ответа. Просто <br>
@@ -337,15 +341,15 @@
             <!--<div class="why_blocks_wrap">-->
             <div class="slide item">
                 <div class="why-block">
-                    <div class="why-block__icons"><img src="img/Shape2.svg" width="42" height="29" alt="">
-                        <h2>10 лет <br>
-                            гарантия</h2>
+                    <div class="why-block__icons"><img src="img/why-midle.svg" width="42" height="29" alt="">
+                        <h3>10 лет <br>
+                            гарантия</h3>
                         <p>На внутреннее <br>
                             содержание матрасов.</p>
                     </div>
-                    <div class="why-block__icons"><img src="img/Shape3.svg" width="42" height="40" alt="">
-                        <h2>11 лет опыта <br>
-                            и знаний</h2>
+                    <div class="why-block__icons"><img src="img/why-hat.svg" width="42" height="40" alt="">
+                        <h3>11 лет опыта <br>
+                            и знаний</h3>
                         <p>Воплощены в одной линейке <br>
                             ортопедических матрасов.</p>
                     </div>
@@ -355,17 +359,17 @@
 
             <div class="slide item">
                 <div class="why-block">
-                    <div class="why-block__icons"><img src="img/Shape4.svg" width="44" height="37" alt="">
-                        <h2>8 лет <br>
-                            работы</h2>
+                    <div class="why-block__icons"><img src="img/why-bird.svg" width="44" height="37" alt="">
+                        <h3>8 лет <br>
+                            работы</h3>
                         <p>Только с госзаказами для <br>
                             медучереждений по их <br>
                             особым требованиям.</p>
                     </div>
 
-                    <div class="why-block__icons"><img src="img/Shape5.svg" width="42" height="29" alt="">
-                        <h2>бесплатная <br>
-                            доставка</h2>
+                    <div class="why-block__icons"><img src="img/why-delivery.svg" width="42" height="29" alt="">
+                        <h3>бесплатная <br>
+                            доставка</h3>
                         <p>По Санкт-Петербургу.</p>
                     </div>
                 </div>
@@ -373,15 +377,15 @@
 
             <div class="slide item">
                 <div class="why-block">
-                    <div class="why-block__icons"><img src="img/Shape6.svg" width="42" height="42" alt="">
-                        <h2>возвращаем <br>
-                            деньги</h2>
+                    <div class="why-block__icons"><img src="img/why-money.svg" width="42" height="42" alt="">
+                        <h3>возвращаем <br>
+                            деньги</h3>
                         <p>Если матрас вам не понравился <br>
                             или оказался неудобным.</p>
                     </div>
-                    <div class="why-block__icons"><img src="img/Shape7.svg" width="42" height="30" alt="">
-                        <h2>Решаем проблемы <br>
-                            напрямую</h2>
+                    <div class="why-block__icons"><img src="img/why-message.svg" width="42" height="30" alt="">
+                        <h3>Решаем проблемы <br>
+                            напрямую</h3>
                         <p>Если возникли какие-либо проблемы <br>
                             или вы хотите оформить возврат, вам не надо <br>
                             ничего писать и ожидать ответа. Просто <br>
@@ -491,21 +495,21 @@
         <div class="container">
             <div class="purple-wrap wow fadeInUp">
                 <div class="purple__column">
-                    <h2>возможно вы думаете,  что...</h2>
-                    <h3>хороший=дорогой</h3>
+                    <h2 class="left_h2">возможно вы думаете,  что...</h2>
+                    <h3 class="left_h3">хороший <span>=</span> дорогой</h3>
 
-                    <p>На самом деле цена сильно зависит от бренда. Однако это не <br>
+                    <p class="left_p">На самом деле цена сильно зависит от бренда. Однако это не <br>
                          значит, что дешевый матрас окажется так же хорош. Нередко  <br>
                         их производят из материалов низкого качества.  </p>
 
-                    <p>Мы предлагаем беспроигрышный вариант: качество <br>
+                    <p class="left_p">Мы предлагаем беспроигрышный вариант: качество <br>
                          по умеренной цене.</p>
 
-                    <h3><span>Необычный</span> матрас <br>  является целебным <br></h3>
-                    <p>Матрасы с частичками серебра, матрасы с добавками минералов <br>
+                    <h3 class="left_h3-low"><span>Необычный</span> матрас <br>  является целебным <br></h3>
+                    <p class="left_p">Матрасы с частичками серебра, матрасы с добавками минералов <br>
                         - все это пустой маркетинг. Лечебные свойства таких матрасов <br>
                          сомнительны, если вообще существуют.   <br></p>
-                    <p>
+                    <p class="left_p">
                         С другой стороны, сон на ортопедическом матрасе благотворно <br>
                          влияет на общее состояние здоровья человека и на качество сна. <br>
                          Это подтверждено множеством исследований.
@@ -513,7 +517,7 @@
                 </div>
 
                 <div class="purple__column">
-                    <h2>вы, конечно,  можете...</h2>
+                    <h2 class="right_h2">вы, конечно,  можете...</h2>
                     <h3>Купить более <span> дорогой/ <br>  дешевый</span> матрас</h3>
 
                     <p>В первом случае вы зря переплатите. Можно получить лучшее <br>
@@ -522,7 +526,7 @@
                     <p>  Во втором случае вы потратитесь дважды. Дешевый матрас быстро <br>
                          придет в негодность, и вы будете вынуждены поменять его.</p>
 
-                    <h3><span>спать</span> на диване <br>  или раскладушке</h3>
+                    <h3 class="right_h3-low"><span>спать</span> на диване <br>  или раскладушке</h3>
 
                     <p>Зачем страдать? Пора получать от сна удовольствие! <br></p>
                     <p>Вам даже не придется мучиться выбором. Ортопедические <br>

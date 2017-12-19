@@ -13,7 +13,7 @@ $brown: #256a42;
 $dark-purple: #484d6d;
 $purple: #596089;
 
-$path: '../';
+//$path: '../';
 
 
 @mixin h1 {
@@ -42,22 +42,22 @@ $path: '../';
 
 @mixin h4 {
   color: #3d3d3d;
-  font-family: "Roboto", sans-serif;
+  font-family: "Circe", sans-serif;
   font-size: 16px;
 
 }
 
 @mixin h5 {
   color: #666666;
-  font-family: "Roboto", sans-serif;
+  font-family: "Circe", sans-serif;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.16px;
 }
 
-@mixin menu_roboto {
+@mixin navigation {
   color: #3d3d3d;
-  font-family: "Roboto", sans-serif;
+  font-family: "Circe", sans-serif;
   font-size: 14px;
   letter-spacing: 0.14px;
   font-weight: 700;
@@ -65,38 +65,40 @@ $path: '../';
 
 @mixin regular_white {
   color: $white;
-  font-family: "Roboto", sans-serif;
+  font-family: "Circe", sans-serif;
   font-size: 14px;
   letter-spacing: 0.14px;
-  font-weight: 400;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @mixin reg {
   color: #666666;
-  font-family: "Roboto", sans-serif;
+  font-family: "Circe", sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: normal;
+  font-style: normal;
 }
 
 @mixin regular_opacity {
   opacity: 0.54;
   color: #666666;
-  font-family: "Roboto", sans-serif;
+  font-family: "Circe", sans-serif;
   font-size: 12px;
 
 }
 
 @mixin link {
   color: #7cb159;
-  font-family: "Roboto", sans-serif;
+  font-family: "Circe", sans-serif;
   font-size: 14px;
   text-decoration: underline;
 }
 
 @mixin link_hover {
   color: #388659;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
+  font-family: "Circe", sans-serif;
+  font-size: 15px;
   text-decoration: underline;
 }
 
@@ -107,7 +109,7 @@ $path: '../';
   width: 205px;
   height: 44px;
   border: 1px solid $green;
-  @include menu_roboto;
+  @include navigation;
   color: $green;
   text-transform: uppercase;
   letter-spacing: 0.7px;
@@ -119,6 +121,7 @@ $path: '../';
     border: 1px solid $green;
     background-color: $green;
     color: #ffffff;
+    transition: 0.7s ease;
 }
   &:active {
     border: 1px solid $green;
@@ -132,7 +135,7 @@ $path: '../';
   height: 44px;
   border: 1px solid $green;
   background-color: $green;
-  @include menu_roboto;
+  @include navigation;
   color: $white;
   text-transform: uppercase;
   letter-spacing: 0.7px;
@@ -144,6 +147,7 @@ $path: '../';
     border: 1px solid $light-brown;
     background-color: $light-brown;
     color: #ffffff;
+    transition: 0.7s ease;
 }
   &:active {
     border: 1px solid $brown;
@@ -157,7 +161,7 @@ $path: '../';
   height: 44px;
   border: 1px solid $dark_purple;
   background-color: $dark_purple;
-  @include menu_roboto;
+  @include navigation;
   color: $white;
   text-transform: uppercase;
   letter-spacing: 0.7px;
@@ -168,6 +172,7 @@ $path: '../';
     border: 1px solid $purple;
     background-color: $purple;
     color: #ffffff;
+    transition: 0.7s ease;
 }
   &:active {
     border: 1px solid $purple;

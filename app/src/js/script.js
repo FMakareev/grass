@@ -114,6 +114,20 @@ $('.button-payment').click(function (event) {
         });
 });
 
+$('.button-white').click(function (event) {
+    event.preventDefault();
+    $('#overlay').fadeIn(400,
+        function () {
+            $('.popup-payment').fadeIn (400)
+                .animate({opacity: 1}, 200);
+            $('img#close-white').click(function () {
+                $(".popup-payment").hide(),
+                    $('#overlay').fadeOut(400);
+            });
+        });
+});
+
+
 
 // carousel
 
@@ -135,46 +149,6 @@ $(".owl-carousel").owlCarousel({
     responsive: {0: {items: 1}, 800: {items: 1}, 1e3: {items: 1}}
 });
 
-//
-// $('.accordion-item').click(function(){
-//     $('.accordion-button').css("display","block");
-// });
-
-// $('.accordion').find('.accordion-item').click(function () {
-//     $('.accordion-item').each(function () {
-//         $(this).find('.accordion-item--active').removeClass('.accordion-item--active');
-//     });
-// });
-
-// var item =
-// var button = '.accordion-button';
-//     $('.accordion-item').click(function(){
-//         $('.accordion-button').removeClass(".accordion-button");
-//         $('.accordion-button').addClass(".accordion-button--active");
-//
-//         if($(".accordion-button").hasClass(".accordion-button--active"))
-//             $(".accordion-button--active").css('display', 'block');
-//         // $('.accordion-button').css('display', 'block');
-//     });
-
-// $('.button-wrap_calculate').find('.button-toggle').click(function () {
-//     $('.button-wrap_calculate').each(function () {
-//         $(this).find('.button-toggle_active').removeClass('button-toggle_active');
-//     });
-//     $(this).addClass('button-toggle_active');
-
-//
-// $('.accordion').find('.accordion-item').click(function (e) {
-//         e.preventDefault();
-//     $('.accordion li a').each(function () {
-//         $('.accordion li a').find('.accordion-button--active').removeClass('accordion-button--active');
-//
-//         // if($('.accordion-item a').hasClass('accordion-button--active'))
-//         //     $(".accordion-button--active:visible");
-//     });
-//     $('.accordion-button').addClass('accordion-button--active');
-// });
-
 $(document).ready(function(){
     $('.accordion-item').hover(function(){
         $('.accordion-button--active').removeClass("accordion-button--active");
@@ -182,108 +156,6 @@ $(document).ready(function(){
     });
 });
 
-//     console.log('hello');
-
-            // $('.accordion-button').css('display', 'block');
-
-// product=JSON.stringify(product);
-// product=JSON.parse(product);
-
-
-
-// вызовем name из первого массива
-// console.log(product.adult[1].name);
-
-
-
-//вызовем весь массив
-// console.log(product);
-
-
-
-//вызовем все массивы
-// for(var i =0;i < adult.length; i++) {
-//     console.log(people[i]);
-// }
-
-
-//вызовем все имена из массивов
-// for(var i =0;i < adult.length; i++) {
-//     console.log(people[i].name);
-// }
-
-
-
-// выведем на экран имена
-// <ul id="adult"></ul>
-//
-// var output = '';
-// for(var i = 0; i < adult.length; i++) {
-//     output += '<li>'+adult[i].name+'</li>';
-// }
-// document.getElementById('adult').innerHTML = output;
-
-
-// var viewModel = {
-//     radio: ko.observable("0"),
-//     select: ko.observable([new size("80"), new size("90"), new size("120"), new size("140"), new size("160"), new size("180"), new size("200") ])
-// };
-// viewModel.calculate = ko.computed(function(){
-//     var sum = this.radio() |0;
-//     this.select().forEach(function(value){
-//         sum += value |0;
-//     });
-//     return sum;
-// }, viewModel)
-// ko.applyBindings(viewModel);
-
-
-
-// $(document).ready(function() { // Ждём загрузки страницы
-//
-//     $(".button-white").click( function () { // Событие нажатия на кнопку "Расчёт"
-//
-//         var action = $("select[name=size]").val(); // Получаем значение действия, которое нужно выполнить
-//         var first = $("input[name=first]").val() * 1; // Переменная первого числа
-//         var second = $("input[name=second]").val() * 1; // Переменная второго числа
-//         var result; // Переменная результата
-//         if (action == '+') { // Если действие - сложение
-//             result = first + second; //  складываем
-//         }
-//         else if (action == '-'){ // Если действие вычитание
-//             result = first - second; // вычитаем
-//         }
-//
-//         }
-//         $("input[name=result]").val(result); // записываем результат
-//     });
-// });
-
-
-// рабочий калькулятор на value
-
-// $(document).change('.varRadio', function () {
-//     var score = 0;
-// $(".selectItem:checked").each(function(){
-//         score += parseInt($(this).val());
-//         var summ = score += parseInt($(this).val());
-//         console.log(summ);
-//         $(".summ").val(summ);
-//     });
-// });
-
-//отловили изменение в состояние checked
-//изначальный 0
-//берем чекнутые баттоны производим интерацию
-//сумма равна изначалному 0 + значение от возвращенного числа функции ParseInt
-//задаем переменную summ
-//summ в консоль
-
-//
-
-// if(window.matchMedia("(max-width: 768px)").matches) {
-//     console.log('hello');
-// }
 
 
 $('#button-calculate').click(function() {
@@ -305,25 +177,6 @@ $('#button-calculate').click(function() {
     }
     choosePopup();
 });
-
-// $("#button-calculate").toggle(
-//
-// function() {
-//
-//     $("#choose__popup").hide("slide", { direction: "right" }, 1000);
-//
-// },
-//
-// function() {
-//
-//     $("#choose__popup").show("slide", { direction: "right" }, 500);
-//
-// }
-//
-// );
-
-
-
 
 
 $('.button-wrap_calculate').find('.button-toggle').click(function () {
@@ -525,7 +378,7 @@ $('.button-wrap_calculate').find('.button-toggle').click(function () {
                     {
                         $(result.type_order).each(function () {
                             if (($(this).attr('id') === id_order)) {
-                                $('#name-order').html($(this).attr('name'));
+                                $('.name-order').html($(this).attr('name'));
                             }
                         });
                     }
@@ -551,7 +404,7 @@ $('.button-wrap_calculate').find('.button-toggle').click(function () {
                     {
                         $(result.order_size).each(function () {
                             if (($(this).attr('id_size') === id_size)) {
-                                $('#popup-size').html($(this).attr('name'));
+                                $('.popup-size').html($(this).attr('name'));
                             }
                         });
                     }
@@ -595,7 +448,7 @@ $('.button-wrap_calculate').find('.button-toggle').click(function () {
                         });
                     }
                 });
-                $('#popup-price').html(price_case + price_ord + price_inner);
+                $('.popup-price').html(price_case + price_ord + price_inner);
             };
         });
     }
@@ -671,7 +524,7 @@ $(function ($) {
             {
                 $(result.type_order).each(function () {
                     if (($(this).attr('id') === id_order)) {
-                        $('#name-order').html($(this).attr('full-name'));
+                        $('.name-order').html($(this).attr('full-name'));
                     }
                 });
             }
@@ -697,7 +550,7 @@ $(function ($) {
             {
                 $(result.order_size).each(function () {
                     if (($(this).attr('id_size') === id_size)) {
-                        $('#popup-size').html($(this).attr('name'));
+                        $('.popup-size').html($(this).attr('name'));
                     }
                 });
             }
@@ -741,7 +594,7 @@ $(function ($) {
                 });
             }
         });
-        $('#popup-price').html(price_case + price_ord + price_inner);
+        $('.popup-price').html(price_case + price_ord + price_inner);
 
     };
     getPrice();
@@ -833,11 +686,7 @@ $('#close').click(function () {
 
 
 
-
-
-
-
-
-
-
-
+if (window.matchMedia("(max-width:768px)").matches) {
+    $('.purple__column h2').removeClass('right_h2 left_h2');
+    $('.purple__column h3').removeClass('right_h3 left_h3 left_h3-low right_h3-low');
+};

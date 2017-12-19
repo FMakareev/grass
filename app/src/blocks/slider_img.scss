@@ -12,7 +12,6 @@ ul.accordion{
   width: inherit;
   height: inherit;
   max-width: 100%;
-  background: #fff;
 }
 
 ul.accordion li {
@@ -52,6 +51,10 @@ ul.accordion li:nth-child(1) img {
 
 .accordion h4 {
   margin: 20px 5px;
+  @include h4;
+  font-family: "Circe-Light", sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 ul.accordion img:hover {
@@ -81,12 +84,16 @@ ul.accordion li:hover{
 .accordion-button--active {
   a {
     display: block;
+    transition: 2s ease;
     @include button-purple;
     line-height: 45px;
     text-align: center;
-    margin: 80px 0;
+    margin: 40px 0 80px 0;
   }
-}
+  h4 {
+      font-weight: 700;
+    }
+  }
 
 
 
