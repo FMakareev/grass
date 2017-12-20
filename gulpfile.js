@@ -80,14 +80,14 @@ gulp.task('sass', function() {
 });
 /* ================================ */
 
-//
-// /* ========= ТАСК "FONTSCSS" ========== */
-// gulp.task('fontscss', function() {
-//     return gulp.src(app + 'src/fonts.css') // Берём источник
-//         .pipe(plumber(err)) // Отслеживаем ошибки
-//         .pipe(gulp.dest(dist + 'css/')) // Выгружаем результат
-//         .pipe(reload({stream: true})); //Перезагружаем сервер
-// });
+
+/* ========= ТАСК "PHP" ========== */
+gulp.task('php', function() {
+    return gulp.src(app + '*.php') // Берём источник
+        .pipe(plumber(err)) // Отслеживаем ошибки
+        .pipe(gulp.dest(dist + '/')) // Выгружаем результат
+        .pipe(reload({stream: true})); //Перезагружаем сервер
+});
 
 /* ======= ТАСК "CSS-LIBS" ======== */
 gulp.task('css-libs', function() {
@@ -171,10 +171,10 @@ gulp.task('build', function(callback) {
         [
             'html',
             'sass',
+            'php',
             'css-libs',
             'js',
             'json',
-            // 'fontscss',
             'js-libs',
             'img',
             'fonts'

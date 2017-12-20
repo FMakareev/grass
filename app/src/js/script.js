@@ -690,3 +690,26 @@ if (window.matchMedia("(max-width:768px)").matches) {
     $('.purple__column h2').removeClass('right_h2 left_h2');
     $('.purple__column h3').removeClass('right_h3 left_h3 left_h3-low right_h3-low');
 };
+
+
+$(document).ready(function() {
+
+    $("#form__popup, #form__popup-accordion, #form__popup-payment, #feedback__form").submit(function() {
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
+            // $("#form__popup").trigger("reset");
+        });
+        return false;
+    });
+});
+
+
+
+$('input[type="tel"]').inputmask('+7 (999) 999 99 99', {
+    clearMaskOnLostFocus: true
+});

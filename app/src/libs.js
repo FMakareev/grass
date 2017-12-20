@@ -5,6 +5,8 @@
 @@include('../libs/owlcarousel/owl.carousel.min.js');
 @@include('../libs/wow/wow.min.js');
 @@include('../libs/TimelineMax.js');
+@@include('../libs/inputmask.min.js');
+@@include('../libs/jquery.inputmask.min.js');
 
 
 

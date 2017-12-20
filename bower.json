@@ -1,5 +1,5 @@
 {
-  "name": "r45h-gulp",
+  "name": "Ilya",
   "description": "",
   "main": "script.js",
   "authors": [
@@ -9,8 +9,6 @@
   "homepage": "",
   "dependencies": {
     "jquery": "2.*",
-    "bootstrap": "3.*",
     "owl.carousel": "2.*",
-    "fontawesome": "4.*"
   }
 }
